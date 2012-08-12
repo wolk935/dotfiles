@@ -9,7 +9,7 @@
 	diff = true
 
 [core]
-	editor = vi
+	editor = vim
 
 [user]
 	name = Daniel Cousens
