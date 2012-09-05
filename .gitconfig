@@ -6,7 +6,10 @@
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [color]
+	branch = true
 	diff = true
+	interactive = true
+	status = true
 
 [core]
 	editor = vim
