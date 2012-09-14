@@ -1,0 +1,1 @@
+dmd eog gimp google-chrome git pulseaudio pavucontrol imagemagick irssi lxterminal mesa python sudo unzip vim vlc wget xorg-xinit xorg-server xorg-server-utils xorg-xdm xorg-xkill zip

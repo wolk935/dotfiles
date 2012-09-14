@@ -15,6 +15,7 @@ rm ~/.vimrc -f
 
 echo "Creating symbolic links to dotfiles..."
 mkdir ~/.config -p
+
 ln -s $wd/.config/lxterminal/lxterminal.conf ~/.config/lxterminal/lxterminal.conf
 ln -s $wd/.bashrc ~/.bashrc
 ln -s $wd/.gitconfig ~/.gitconfig
@@ -31,6 +32,7 @@ select yn in "Yes" "No"; do
 	if [ ! -f /usr/bin/abs ]; then
 		yaourt -S abs
 	fi
+
 	if [ ! -f /usr/bin/dmenu ]; then
 		yaourt -S dmenu
 	fi
