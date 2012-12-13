@@ -16,12 +16,13 @@ else
 	PS1='$\u@\h:\w\$ '
 fi
 
-# enable color support of ls and also add handy aliases
+# enable color support
 if [ -x /usr/bin/dircolors ]; then
 	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
-	alias vi="vim"
 	alias grep='grep --color=always'
-	alias less='less -R'
 	alias ls='ls --color=always'
 fi
+
+alias vi="vim"
+alias less='less -R'
