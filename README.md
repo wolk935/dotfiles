@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-My vim configuration, git config and bashrc.
-Includes a symlink script to avoid having to move the repo to home
+My configuration files for bash, dwm and bash.
 
-Includes arch-linux install scripts (beta)
+Including a symlink script for simple install of configuration files (setup.sh).
+Also includes arch-linux simple install script. (root-install.sh)
