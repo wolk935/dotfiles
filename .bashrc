@@ -2,9 +2,9 @@
 [ -z "$PS1" ] && return
 
 shopt -s histappend
-HISTCONTROL=ignoredups:ignorespace
-HISTFILESIZE=102400
-HISTSIZE=10000
+HISTCONTROL=ignoredups:ignorespace:erasedups
+HISTFILESIZE=10240000
+HISTSIZE=1000000
 
 # wrap after resize
 shopt -s checkwinsize
