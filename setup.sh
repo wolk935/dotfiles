@@ -1,11 +1,11 @@
 wd=`pwd`
 
 if [ ! -f $wd/setup.sh ]; then
-	echo "Must execute locally."
+	echo "Must execute in same working directory."
 	exit
 fi
 
-echo "Deleting default dotfiles..."
+echo "Deleting defaults."
 rm ~/.bash* -f
 rm ~/.xsession* -f
 rm ~/.gitconfig -f
@@ -13,7 +13,7 @@ rm ~/.profile -f
 rm ~/.vim -rf
 rm ~/.vimrc -f
 
-echo "Creating symbolic links to dotfiles..."
+echo "Creating symbolic links to dotfiles."
 mkdir ~/.config -p
 
 ln -s $wd/.config/lxterminal/lxterminal.conf ~/.config/lxterminal/lxterminal.conf
@@ -37,22 +37,23 @@ select yn in "Yes" "No"; do
 		yaourt -S dmenu
 	fi
 
-	echo "Downloading dwm..."
+	echo "Downloading dwm."
 	sudo abs community/dwm
 	cp -r /var/abs/community/dwm ~/workspace/dwm
 
-	echo "Compiling dwm..."
+	echo "Compiling dwm."
 	cd ~/workspace/dwm
 	makepkg -i
 
-	echo "Configuring dwm..."
+	echo "Configuring dwm."
 	rm ~/workspace/dwm/config.h -f
 	ln -s $wd/dwm-config.h ~/workspace/dwm/config.h
 
+	rm ~/.xsession -f
 	chmod +x $wd/.xsession
 	ln -s $wd/.xsession ~/.xsession
 
-	echo "Recompiling dwm..."
+	echo "Recompiling dwm."
 	makepkg -g >> PKGBUILD
 	makepkg -efi
 
@@ -69,7 +70,7 @@ select yn in "Yes" "No"; do
 		yaourt -S openssh
 	fi
 
-	echo "Detected SSH, setting up keys..."
+	echo "Detected SSH, setting up keys."
 	mkdir ~/.ssh -p
 	cd ~/.ssh
 
