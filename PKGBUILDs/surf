@@ -1,0 +1,16 @@
+pkgname=surf
+pkgver=0.5
+pkgrel=0
+pkgdesc="It's a simple web browser based on webkit/gtk+."
+arch=('i686' 'x86_64')
+license=('MIT/X')
+depends=('gtk2' 'libwebkit')
+url="http://surf.suckless.org"
+source=(http://dl.suckless.org/surf/$pkgname-$pkgver.tar.gz)
+
+build() {
+	cd $srcdir/$pkgname-$pkgver
+
+	install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+	install -Dm644 README "$pkgdir/usr/share/doc/$pkgname/README"
+}
