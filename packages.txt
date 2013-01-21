@@ -5,7 +5,6 @@ git
 google-chrome
 imagemagick
 irssi
-lxterminal
 mesa
 p7zip
 pavucontrol
