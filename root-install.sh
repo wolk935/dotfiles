@@ -1,21 +1,28 @@
+#!/bin/bash
+
 echo "Downloading Arch-Linux install script"
+#TODO gist.github.com/3794408
 wget arch.mario-aichinger.at/install.sh
 
 echo "Running Arch-Linux install script"
 sh install.sh
 
-echo "[archlinuxfr]" >> pacman.conf
-echo "Server = http://repo.archlinux.fr/$arch" >> pacman.conf
-
+# yaourt
+echo "Installing yaourt"
+echo "[archlinuxfr]" >> /etc/pacman.conf
+echo "Server = http://repo.archlinux.fr/$arch" >> /etc/pacman.conf
 pacman -S yaourt
 
+# mirrors
+echo "Setting up mirrors"
 tmpfile=$(mktemp --suffix=-mirrorlist)
-wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protocol=http&ip_version=4&ip_version=6&user_mirror_status=on" | sed 's/#Server/Server/g' > "$tmpfile"
-mv -i "$tmpfile" /etc/pacman.d/mirrorlist
+wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protocol=http&ip_version=4&ip_version=6&user_mirror_status=on" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
 
+# custom packages
 echo "Installing custom packages"
 yaourt -Syu `echo packages.txt`
 
+# graphics drivers
 echo "Select [initial] graphics driver:"
 select yn in "Nvidia" "Ati"; do
 	case $yn in
