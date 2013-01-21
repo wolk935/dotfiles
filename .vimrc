@@ -40,10 +40,6 @@ nnoremap <down> <nop>
 nnoremap <up> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
-"inoremap <down> <nop>
-"inoremap <up> <nop>
-"inoremap <left> <nop>
-"inoremap <right> <nop>
 
 " Disable man lookup
 nnoremap K <nop>
@@ -54,10 +50,6 @@ nnoremap <down> gj
 nnoremap <up> gk
 nnoremap j gj
 nnoremap k gk
-
-" Perl/Python regex schema
-nnoremap / /\v
-vnoremap / /\v
 
 " Find replace in vselection
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
@@ -75,12 +67,12 @@ colorscheme wombat256mod
 au FileType dl setf python
 au FileType vim let b:commentchar='"'
 au FileType make,python,ruby,sh let b:commentchar='#'
-au FileType c,cpp,d,java let b:commentchar='//'
+au FileType c,cpp,d,java,javascript let b:commentchar='//'
 au FileType plaintex,tex let b:commentchar='%'
 au FileType fortran let b:commentchar='!'
 
 " Strip trailing whitespace on save
-autocmd FileType c,cpp,d,fortran,java,make,plaintex,python,ruby,sh,tex,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,d,fortran,java,javascript,make,plaintex,python,ruby,sh,tex,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 let mapleader=","
 
