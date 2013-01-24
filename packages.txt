@@ -1,5 +1,6 @@
 dmd
 eog
+ffmpeg
 gimp
 git
 google-chrome
