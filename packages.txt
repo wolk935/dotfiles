@@ -12,6 +12,7 @@ pavucontrol
 pulseaudio
 python
 sudo
+time
 tree
 vim
 vlc
