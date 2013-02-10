@@ -20,6 +20,5 @@ wget
 xloadimage
 xorg-server
 xorg-server-utils
-xorg-xdm
 xorg-xinit
 xorg-xkill

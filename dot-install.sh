@@ -10,9 +10,9 @@ fi
 echo "Deleting defaults."
 rm ~/.bash* -f
 rm ~/.gitconfig -f
-rm ~/.profile -f
 
 echo "Creating symbolic links."
 ln -s $wd/.bashrc ~/.bashrc
+ln -s $wd/.bash_profile ~/.bash_profile
 ln -s $wd/.gitconfig ~/.gitconfig
-ln -s $wd/.profile ~/.profile
+ln -s $wd/.xinitrc ~/.xinitrc
