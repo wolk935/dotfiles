@@ -15,12 +15,11 @@ pacman -S yaourt
 
 # mirrors
 echo "Setting up mirrors"
-tmpfile=$(mktemp --suffix=-mirrorlist)
-wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protocol=http&ip_version=4&ip_version=6&user_mirror_status=on" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
+wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protocol=http&user_mirror_status=on" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
 
 # custom packages
 echo "Installing custom packages"
-yaourt -Syu `echo packages.txt`
+yaourt -Syu `cat packages.txt`
 
 # graphics drivers
 echo "Select [initial] graphics driver:"
