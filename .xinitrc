@@ -1,5 +1,6 @@
 #!/bin/bash
 
+xmodmap -e 'keycode 23 = Tab'
 xloadimage -onroot -fullscreen `find ~/Downloads/ -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
 
 while true; do
