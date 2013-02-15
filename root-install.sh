@@ -21,6 +21,12 @@ wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protoco
 echo "Installing custom packages"
 yaourt -Syu `cat packages.txt`
 
+echo "Configuring iptables"
+iptables-restore < iptables.rules
+
+cp iptables.rules /etc/iptables/custom.rules
+echo "iptables-restore < /etc/iptables/custom.rules" >> /etc/rc.local
+
 # graphics drivers
 echo "Select [initial] graphics driver:"
 select yn in "Nvidia" "Ati"; do
@@ -30,14 +36,14 @@ select yn in "Nvidia" "Ati"; do
 	esac
 done
 
-echo "Enter non-root username:"
-read username
-useradd -m -g users -G audio,games,lp,optical,power,scanner,storage,video -s /bin/bash $username
-passwd $username
-
 #TODO: Automate the following section
 echo "Manual configuration mode (visudo, rc.conf, inittab):"
 visudo
 
 vi /etc/rc.conf
 vi /etc/inittab
+
+echo "Enter non-root username:"
+read username
+useradd -m -g users -G audio,games,lp,optical,power,scanner,storage,video -s /bin/bash $username
+passwd $username
