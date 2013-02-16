@@ -35,6 +35,9 @@ set nobackup
 set noswapfile
 set nowb
 
+" Fast terminal connection
+set ttyfast
+
 " Disable arrowkeys navigation
 nnoremap <down> <nop>
 nnoremap <up> <nop>

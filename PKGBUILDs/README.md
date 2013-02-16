@@ -3,9 +3,12 @@ PKGBUILDs
 
 Download via
 
-makepkg -op st
-makepkg -op dwm
+`makepkg -op st`
+
+etc.
+
+--------
 
 Install via
 
-makepkg -efip st
+`makepkg -efip st`
