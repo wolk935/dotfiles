@@ -28,3 +28,4 @@ fi
 
 alias vi="vim"
 alias less="less -R"
+alias time="/usr/bin/time -P"
