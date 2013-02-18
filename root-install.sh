@@ -21,11 +21,15 @@ wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protoco
 echo "Installing custom packages"
 yaourt -Syu `cat packages.txt`
 
+# iptables configuration
 echo "Configuring iptables"
 iptables-restore < iptables.rules
+ip6tables-restore < ip6tables.rules
 
 cp iptables.rules /etc/iptables/custom.rules
+cp ip6tables.rules /etc/iptables/custom_ipv6.rules
 echo "iptables-restore < /etc/iptables/custom.rules" >> /etc/rc.local
+echo "ip6tables-restore < /etc/iptables/custom_ipv6.rules" >> /etc/rc.local
 
 # graphics drivers
 echo "Select [initial] graphics driver:"
