@@ -17,6 +17,7 @@ tree
 vim
 vlc
 wget
+wireshark-gtk
 xloadimage
 xorg-server
 xorg-server-utils
