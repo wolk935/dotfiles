@@ -26,6 +26,6 @@ if [ -x /usr/bin/dircolors ]; then
 	alias ls="ls --color=always"
 fi
 
-alias vi="vim"
 alias less="less -R"
 alias time="/usr/bin/time -P"
+alias vi="vim"
