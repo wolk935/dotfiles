@@ -1,5 +1,5 @@
 dmd
-eog
+feh
 ffmpeg
 gimp
 git
@@ -18,7 +18,6 @@ vim
 vlc
 wget
 wireshark-gtk
-xloadimage
 xorg-server
 xorg-server-utils
 xorg-xinit
