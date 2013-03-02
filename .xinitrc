@@ -1,7 +1,7 @@
 #!/bin/bash
 
 xmodmap -e 'keycode 23 = Tab'
-xloadimage -onroot -fullscreen `find ~/Downloads/ -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
+feh --bg-fill `find ~/Downloads/ -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
 
 while true; do
 	xsetroot -name "$(date +"%a %d/%m/%y | %H:%M:%S") $(acpi -b | awk 'sub(/,/,"") {print $3, $4}')"
