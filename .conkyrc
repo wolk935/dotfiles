@@ -27,8 +27,6 @@ override_utf8_locale yes
 use_spacer none
 
 TEXT
-${alignc 32}${font Open Sans:size=20}${color lightgray}arch${color dodgerblue3} linux$font$color
-
 ${font Open Sans:bold:size=10}${color dodgerblue3}System${hr}$color$font
 Uptime $alignr $uptime
 
@@ -40,6 +38,7 @@ ${top name 4}${alignr}${top cpu 4} %
 
 ${font Open Sans:bold:size=8.5}RAM$font
 $mem / $memmax $alignr $memperc %
+${membar /}
 
 ${font Open Sans:bold:size=8.5}STORAGE$font
 /dev/sda $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /} %
