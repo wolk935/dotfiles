@@ -61,18 +61,24 @@ up/down $alignr ${upspeedf wlan0} / ${downspeedf wlan0} kb/s
 total $alignr ${totalup wlan0} / $alignr ${totaldown wlan0}$endif
 
 ${font Open Sans:bold:size=10}${color dodgerblue3}Connections${hr}$color$font
-${tcp_portmon 1 65535 rip 0}$alignr${tcp_portmon 1 65535 rhost 0}
-${tcp_portmon 1 65535 rip 1}$alignr${tcp_portmon 1 65535 rhost 1}
-${tcp_portmon 1 65535 rip 2}$alignr${tcp_portmon 1 65535 rhost 2}
-${tcp_portmon 1 65535 rip 3}$alignr${tcp_portmon 1 65535 rhost 3}
-${tcp_portmon 1 65535 rip 4}$alignr${tcp_portmon 1 65535 rhost 4}
-${tcp_portmon 1 65535 rip 5}$alignr${tcp_portmon 1 65535 rhost 5}
-${tcp_portmon 1 65535 rip 6}$alignr${tcp_portmon 1 65535 rhost 6}
-${tcp_portmon 1 65535 rip 7}$alignr${tcp_portmon 1 65535 rhost 7}
-${tcp_portmon 1 65535 rip 8}$alignr${tcp_portmon 1 65535 rhost 8}
-${tcp_portmon 1 65535 rip 9}$alignr${tcp_portmon 1 65535 rhost 9}
-${tcp_portmon 1 65535 rip 10}$alignr${tcp_portmon 1 65535 rhost 10}
-${tcp_portmon 1 65535 rip 11}$alignr${tcp_portmon 1 65535 rhost 11}
-${tcp_portmon 1 65535 rip 12}$alignr${tcp_portmon 1 65535 rhost 12}
-${tcp_portmon 1 65535 rip 13}$alignr${tcp_portmon 1 65535 rhost 13}
-${tcp_portmon 1 65535 rip 14}$alignr${tcp_portmon 1 65535 rhost 14}
+
+${tcp_portmon 1 65535 rip 0}$alignr${tcp_portmon 1 65535 rport 0}
+${tcp_portmon 1 65535 rip 1}$alignr${tcp_portmon 1 65535 rport 1}
+${tcp_portmon 1 65535 rip 2}$alignr${tcp_portmon 1 65535 rport 2}
+${tcp_portmon 1 65535 rip 3}$alignr${tcp_portmon 1 65535 rport 3}
+${tcp_portmon 1 65535 rip 4}$alignr${tcp_portmon 1 65535 rport 4}
+${tcp_portmon 1 65535 rip 5}$alignr${tcp_portmon 1 65535 rport 5}
+${tcp_portmon 1 65535 rip 6}$alignr${tcp_portmon 1 65535 rport 6}
+${tcp_portmon 1 65535 rip 7}$alignr${tcp_portmon 1 65535 rport 7}
+${tcp_portmon 1 65535 rip 8}$alignr${tcp_portmon 1 65535 rport 8}
+${tcp_portmon 1 65535 rip 9}$alignr${tcp_portmon 1 65535 rport 9}
+${tcp_portmon 1 65535 rip 10}$alignr${tcp_portmon 1 65535 rport 10}
+${tcp_portmon 1 65535 rip 11}$alignr${tcp_portmon 1 65535 rport 11}
+${tcp_portmon 1 65535 rip 12}$alignr${tcp_portmon 1 65535 rport 12}
+${tcp_portmon 1 65535 rip 13}$alignr${tcp_portmon 1 65535 rport 13}
+${tcp_portmon 1 65535 rip 14}$alignr${tcp_portmon 1 65535 rport 14}
+${tcp_portmon 1 65535 rip 15}$alignr${tcp_portmon 1 65535 rport 15}
+${tcp_portmon 1 65535 rip 16}$alignr${tcp_portmon 1 65535 rport 16}
+${tcp_portmon 1 65535 rip 17}$alignr${tcp_portmon 1 65535 rport 17}
+${tcp_portmon 1 65535 rip 18}$alignr${tcp_portmon 1 65535 rport 18}
+${tcp_portmon 1 65535 rip 19}$alignr${tcp_portmon 1 65535 rport 19}
