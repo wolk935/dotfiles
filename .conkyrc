@@ -1,27 +1,27 @@
 background no
 use_xft yes
 xftfont 123:size=8
-xftalpha 0.1
-update_interval 1
+xftalpha 0.7
+update_interval 1 
 total_run_times 0
+
 own_window no 
 own_window_type normal
 own_window_transparent no
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 double_buffer yes
 
-maximum_width 300
 draw_shades yes 
 draw_outline no
 draw_borders no
 draw_graph_borders no
-default_color lightgray
+default_color lightgray 
 alignment top_right
 gap_x 24
 
 no_buffers yes
 uppercase no
-cpu_avg_samples 1 
+cpu_avg_samples 1
 net_avg_samples 1
 override_utf8_locale yes
 use_spacer none
