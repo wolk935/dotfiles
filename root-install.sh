@@ -1,21 +1,14 @@
 #!/bin/bash
 
-echo "Downloading Arch-Linux install script"
-#TODO gist.github.com/3794408
-wget arch.mario-aichinger.at/install.sh
-
-echo "Running Arch-Linux install script"
-sh install.sh
+# mirrors
+echo "Setting up mirrors"
+wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protocol=http&user_mirror_status=on" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
 
 # yaourt
 echo "Installing yaourt"
 echo "[archlinuxfr]" >> /etc/pacman.conf
 echo "Server = http://repo.archlinux.fr/$arch" >> /etc/pacman.conf
 pacman -S yaourt
-
-# mirrors
-echo "Setting up mirrors"
-wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protocol=http&user_mirror_status=on" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
 
 # custom packages
 echo "Installing custom packages"
@@ -37,12 +30,8 @@ select yn in "Nvidia" "Ati"; do
 	esac
 done
 
-#TODO: Automate the following section
-echo "Manual configuration mode (visudo, rc.conf, inittab):"
+echo "Manual configuration mode (visudo):"
 visudo
-
-vi /etc/rc.conf
-vi /etc/inittab
 
 echo "Enter non-root username:"
 read username

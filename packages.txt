@@ -1,4 +1,5 @@
 conky
+colordiff
 dmd
 feh
 ffmpeg
@@ -8,12 +9,12 @@ google-chrome
 imagemagick
 irssi
 mesa
+node
 p7zip
 pavucontrol
 pulseaudio
 python
 sudo
-time
 tree
 vim
 vlc

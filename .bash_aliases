@@ -1,3 +1,4 @@
+alias diff="colordiff"
 alias feh="feh --scale-down"
 alias grep="grep --color=always"
 alias less="less -R"
