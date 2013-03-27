@@ -2,7 +2,7 @@
 
 # mirrors
 echo "Setting up mirrors"
-wget -qO- "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protocol=http&user_mirror_status=on" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
+wget -qO - "https://www.archlinux.org/mirrorlist/?country=AU&protocol=ftp&protocol=http&user_mirror_status=on" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
 
 # yaourt
 echo "Installing yaourt"
