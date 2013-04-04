@@ -6,7 +6,6 @@ shopt -s histappend
 HISTCONTROL=ignoredups:ignorespace:erasedups
 HISTFILESIZE=10240000
 HISTSIZE=1000000
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # wrap after resize
 shopt -s checkwinsize
