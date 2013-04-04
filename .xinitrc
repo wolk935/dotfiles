@@ -2,7 +2,6 @@
 
 pm-powersave true
 conky --daemonize
-xmodmap -e 'keycode 23 = Tab'
 feh --bg-fill `find ~/Downloads/wallpapers -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
 
 while true; do
