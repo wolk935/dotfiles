@@ -23,10 +23,11 @@ echo "ip6tables-restore < /etc/iptables/custom_ipv6.rules" >> /etc/rc.local
 
 # graphics drivers
 echo "Select [initial] graphics driver:"
-select yn in "Nvidia" "Ati"; do
+select yn in "Nvidia" "Ati" "Intel"; do
 	case $yn in
 		Nvidia ) yaourt -S xf86-video-nouveua; break;;
 		Ati ) yaourt -S xf86-video-ati; break;;
+		Intel ) yaourt -S xf86-video-intel; break;;
 	esac
 done
 
