@@ -1,3 +1,4 @@
+alsa-utils
 conky
 colordiff
 dmd
@@ -7,13 +8,9 @@ gimp
 git
 google-chrome
 imagemagick
-irssi
 mesa
 node
-nmap
 p7zip
-pavucontrol
-pulseaudio
 python
 sudo
 tree
