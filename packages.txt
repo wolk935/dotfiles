@@ -18,6 +18,7 @@ vim
 vlc
 wget
 wireshark-gtk
+xclip
 xorg-server
 xorg-server-utils
 xorg-xinit
