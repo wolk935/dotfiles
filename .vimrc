@@ -70,12 +70,12 @@ colorscheme wombat256mod
 au FileType dl setf python
 au FileType vim let b:commentchar='"'
 au FileType make,python,ruby,sh let b:commentchar='#'
-au FileType c,cpp,d,java,javascript let b:commentchar='//'
+au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
 au FileType plaintex,tex let b:commentchar='%'
 au FileType fortran let b:commentchar='!'
 
 " Strip trailing whitespace on save
-autocmd FileType c,cpp,d,fortran,java,javascript,make,plaintex,python,ruby,sh,tex,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,cpp,cs,d,fortran,java,javascript,make,plaintex,python,ruby,sh,tex,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 let mapleader=","
 
