@@ -2,7 +2,7 @@ background no
 use_xft yes
 xftfont 123:size=8
 xftalpha 0.7
-update_interval 1 
+update_interval 2
 total_run_times 0
 
 own_window no 
