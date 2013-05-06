@@ -16,5 +16,6 @@
 [user]
 	name = Daniel Cousens
 	email = daniel210x@gmail.com
+
 [push]
 	default = matching
