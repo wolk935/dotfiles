@@ -10,6 +10,7 @@ google-chrome
 imagemagick
 mesa
 node
+openssh
 p7zip
 python
 sudo
