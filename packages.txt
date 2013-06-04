@@ -8,12 +8,14 @@ gimp
 git
 google-chrome
 imagemagick
+lsof
 mesa
 node
 openssh
 p7zip
 python
 sudo
+transmission-gtk
 tree
 vim
 vlc
