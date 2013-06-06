@@ -68,24 +68,23 @@ function do_fstab() {
 }
 
 function chroot_into_new_system() {
+	echo "$hostname" > /mtn/etc/hostname
 	echo 'LANG="'"$locale"'"' > /mnt/etc/locale.conf
-
-	arch-chroot /mnt << EOF
-
-	echo "$hostname" > /etc/hostname
-
-	echo "Locale"
-	locale -a
-	echo $locale > /etc/locale.gen
-	locale-gen
-
+	echo $locale > /mnt/etc/locale.gen
+	
 	echo "Timezone"
-	ln -s $timezone /etc/localtime
+	ln -s $timezone /mnt/etc/localtime
 
 	echo "Keyboard Layout"
-	echo "KEYMAP=$kbl" > /etc/vconsole.conf
-	echo "FONT=lat9w-16" >> /etc/vconsole.conf
-	echo "FONT_MAP=8859-1_to_uni" >> /etc/vconsole.conf
+	echo "KEYMAP=$kbl" > /mnt/etc/vconsole.conf
+	echo "FONT=lat9w-16" >> /mnt/etc/vconsole.conf
+	echo "FONT_MAP=8859-1_to_uni" >> /mnt/etc/vconsole.conf
+
+	# TODO: FIXME
+	arch-chroot /mnt
+
+	echo "Locale"
+	locale-gen
 
 	echo "mkinitcpio -p linux..."
 	mkinitcpio -p linux
