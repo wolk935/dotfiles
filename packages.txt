@@ -8,6 +8,8 @@ gimp
 git
 google-chrome
 imagemagick
+iptables
+iproute2
 lsof
 mesa
 node
