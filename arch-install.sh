@@ -80,26 +80,26 @@ function chroot_into_new_system() {
 	echo "FONT=lat9w-16" >> /mnt/etc/vconsole.conf
 	echo "FONT_MAP=8859-1_to_uni" >> /mnt/etc/vconsole.conf
 
-	# TODO: FIXME
-	arch-chroot /mnt
+	arch-chroot /mnt << EOF
+echo "Locale"
+locale-gen
 
-	echo "Locale"
-	locale-gen
+echo "mkinitcpio -p linux..."
+mkinitcpio -p linux
 
-	echo "mkinitcpio -p linux..."
-	mkinitcpio -p linux
+echo "Starting dm-mod..."
+modprobe dm-mod
 
-	echo "Starting dm-mod..."
-	modprobe dm-mod
+echo "Install and configure GRUB..."
+grub-install --recheck --debug /dev/"$device"
 
-	echo "Install and configure GRUB..."
-	grub-install --recheck --debug /dev/"$device"
+mkdir -p /boot/grub/locale
+cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
+grub-mkconfig -o /boot/grub/grub.cfg
 
-	mkdir -p /boot/grub/locale
-	cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
-	grub-mkconfig -o /boot/grub/grub.cfg
+passwd
 
-	passwd
+EOF
 }
 
 function unmount() {
