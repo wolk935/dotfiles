@@ -12,7 +12,7 @@ iptables
 iproute2
 lsof
 mesa
-node
+nodejs
 openssh
 p7zip
 python
