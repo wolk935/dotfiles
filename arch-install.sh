@@ -68,7 +68,7 @@ function do_fstab() {
 }
 
 function do_chroot() {
-	echo "$hostname" > /mtn/etc/hostname
+	echo "$hostname" > /mnt/etc/hostname
 	echo 'LANG="'"$locale"'"' > /mnt/etc/locale.conf
 	echo $locale > /mnt/etc/locale.gen
 	
