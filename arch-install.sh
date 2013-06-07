@@ -67,7 +67,7 @@ function do_fstab() {
 	genfstab -p /mnt >> /mnt/etc/fstab
 }
 
-function chroot_into_new_system() {
+function do_chroot() {
 	echo "$hostname" > /mtn/etc/hostname
 	echo 'LANG="'"$locale"'"' > /mnt/etc/locale.conf
 	echo $locale > /mnt/etc/locale.gen
@@ -113,5 +113,5 @@ do_mount
 do_pacstrap
 do_fstab
 
-chroot_into_new_system
+do_chroot
 unmount
