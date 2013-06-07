@@ -39,8 +39,8 @@ function do_yaourt() {
 	echo "SigLevel = Never" >> /etc/pacman.conf
 	echo "Server = http://repo.archlinux.fr/\$arch" >> /etc/pacman.conf
 
-	pacman -S yaourt
-	yaourt -Syu `cat packages.txt`
+	pacman -Sy yaourt
+	yaourt -Su `cat packages.txt`
 }
 
 do_drivers
