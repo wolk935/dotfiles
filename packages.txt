@@ -1,6 +1,7 @@
 alsa-utils
 conky
 colordiff
+curl
 dmd
 dmenu
 feh
@@ -23,7 +24,6 @@ transmission-gtk
 tree
 vim
 vlc
-wget
 wireshark-gtk
 xclip
 xorg-server

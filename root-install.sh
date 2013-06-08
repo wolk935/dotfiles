@@ -11,9 +11,9 @@ function do_drivers() {
 	echo "Select [initial] graphics driver:"
 	select yn in "Nvidia" "Ati" "Intel"; do
 	      case $yn in
-		Nvidia ) pacman -S xf86-video-nouveua; break;;
-		Ati ) pacman -S xf86-video-ati; break;;
-		Intel ) pacman -S xf86-video-intel; break;;
+		Nvidia ) pacman -Sy xf86-video-nouveua; break;;
+		Ati ) pacman -Sy xf86-video-ati; break;;
+		Intel ) pacman -Sy xf86-video-intel; break;;
 	      esac
 	done
 }
@@ -26,25 +26,25 @@ function do_iptables() {
 	echo "ip6tables-restore < /etc/iptables/custom_ipv6.rules" >> /etc/rc.local
 }
 
-function do_mirrorlist() {
-	if [ ! -x /usr/bin/wget ]; then
-		pacman -S wget
-	fi
-
-	wget --quiet -O - "https://www.archlinux.org/mirrorlist/?country=AU" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
-}
-
 function do_yaourt() {
 	echo "[archlinuxfr]" >> /etc/pacman.conf
 	echo "SigLevel = Never" >> /etc/pacman.conf
 	echo "Server = http://repo.archlinux.fr/\$arch" >> /etc/pacman.conf
 
 	pacman -Sy yaourt
-	yaourt -Su `cat packages.txt`
+	yaourt -Syu `cat packages.txt`
 }
 
+function update_mirrorlist() {
+	if [ ! -x /usr/bin/curl ]; then
+		pacman -Sy curl
+	fi
+
+	curl "https://www.archlinux.org/mirrorlist/?country=AU" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
+}
+
+update_mirrorlist
 do_drivers
 do_iptables
-do_mirrorlist
 do_yaourt
 create_user
