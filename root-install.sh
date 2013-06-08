@@ -20,10 +20,10 @@ function do_drivers() {
 
 function do_iptables() {
 	echo "Configuring iptables"
-	sh update-iptables.sh
+	systemctl enable iptables.service
+	systemctl enable ip6tables.service
 
-	echo "iptables-restore < /etc/iptables/custom.rules" > /etc/rc.local
-	echo "ip6tables-restore < /etc/iptables/custom_ipv6.rules" >> /etc/rc.local
+	./iptables.sh
 }
 
 function do_yaourt() {
