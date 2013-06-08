@@ -1,5 +1,4 @@
 alsa-utils
-conky
 colordiff
 curl
 dmd
