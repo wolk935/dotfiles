@@ -15,63 +15,11 @@ rootfs="ext3"
 
 base="base base-devel grub-bios"
 
-function do_partition() {
-fdisk /dev/$device << EOF
-d
-1
-d
-2
-d
-n
-p
-1
-
-+$bootsize
-a
-1
-n
-p
-2
-
-+$swapsize
-t
-2
-82
-n
-p
-3
-
-
-p
-w
-EOF
-}
-
-function do_formatting() {
-	mkfs -t "$bootfs" /dev/"$device"1
-	mkswap /dev/"$device"2
-	mkfs -t "$rootfs" /dev/"$device"3
-}
-
-function do_mount() {
-	mount /dev/"$device"3 /mnt
-	mkdir /mnt/boot
-	mount /dev/"$device"1 /mnt/boot
-}
-
-function do_pacstrap() {
-	pacstrap /mnt $base
-}
-
-function do_fstab() {
-	genfstab -p /mnt >> /mnt/etc/fstab
-}
-
 function do_chroot() {
 	echo "$hostname" > /mnt/etc/hostname
 	echo 'LANG="'"$locale"'"' > /mnt/etc/locale.conf
 	echo $locale > /mnt/etc/locale.gen
-	
+
 	echo "Timezone"
 	ln -s $timezone /mnt/etc/localtime
 
@@ -99,6 +47,58 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 passwd
 
+EOF
+}
+
+function do_formatting() {
+	mkfs -t "$bootfs" /dev/"$device"1
+	mkswap /dev/"$device"2
+	mkfs -t "$rootfs" /dev/"$device"3
+}
+
+function do_fstab() {
+	genfstab -p /mnt >> /mnt/etc/fstab
+}
+
+function do_mount() {
+	mount /dev/"$device"3 /mnt
+	mkdir /mnt/boot
+	mount /dev/"$device"1 /mnt/boot
+}
+
+function do_pacstrap() {
+	pacstrap /mnt $base
+}
+
+function do_partition() {
+	fdisk /dev/$device << EOF
+d
+1
+d
+2
+d
+n
+p
+1
+
++$bootsize
+a
+1
+n
+p
+2
+
++$swapsize
+t
+2
+82
+n
+p
+3
+
+
+p
+w
 EOF
 }
 
