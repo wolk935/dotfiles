@@ -2,6 +2,7 @@ alsa-utils
 conky
 colordiff
 dmd
+dmenu
 feh
 ffmpeg
 gimp
