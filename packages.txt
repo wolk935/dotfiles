@@ -10,7 +10,6 @@ git
 google-chrome
 imagemagick
 iptables
-iproute2
 lsof
 mesa
 nodejs
@@ -18,7 +17,6 @@ openssh
 p7zip
 pm-utils
 python
-sudo
 transmission-gtk
 tree
 vim
