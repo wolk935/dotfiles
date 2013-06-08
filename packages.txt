@@ -15,7 +15,6 @@ mesa
 nodejs
 openssh
 p7zip
-pm-utils
 python
 transmission-gtk
 tree
