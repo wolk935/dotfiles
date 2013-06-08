@@ -20,25 +20,19 @@ function do_chroot() {
 	echo 'LANG="'"$locale"'"' > /mnt/etc/locale.conf
 	echo $locale > /mnt/etc/locale.gen
 
-	echo "Timezone"
 	ln -s $timezone /mnt/etc/localtime
 
-	echo "Keyboard Layout"
 	echo "KEYMAP=$kbl" > /mnt/etc/vconsole.conf
 	echo "FONT=lat9w-16" >> /mnt/etc/vconsole.conf
 	echo "FONT_MAP=8859-1_to_uni" >> /mnt/etc/vconsole.conf
 
 	arch-chroot /mnt << EOF
-echo "Locale"
 locale-gen
 
-echo "mkinitcpio -p linux..."
 mkinitcpio -p linux
 
-echo "Starting dm-mod..."
 modprobe dm-mod
 
-echo "Install and configure GRUB..."
 grub-install --recheck --debug /dev/"$device"
 
 mkdir -p /boot/grub/locale
