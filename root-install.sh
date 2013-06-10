@@ -20,10 +20,19 @@ function do_drivers() {
 
 function do_iptables() {
 	echo "Configuring iptables"
+
+	cp iptables.rules /etc/iptables/iptables.rules
+	cp ip6tables.rules /etc/iptables/ip6tables.rules
+
+	chmod 700 /etc/iptables/
+}
+
+function do_services() {
+	systemctl enable dhcpcd.service
 	systemctl enable iptables.service
 	systemctl enable ip6tables.service
 
-	./iptables.sh
+	chmod 700 /etc/systemd/
 }
 
 function do_yaourt() {
@@ -46,5 +55,6 @@ function update_mirrorlist() {
 update_mirrorlist
 do_drivers
 do_iptables
+do_services
 do_yaourt
 create_user
