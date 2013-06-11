@@ -1,0 +1,13 @@
+check_hash = yes
+dht = off
+directory = ./Downloads/
+encryption = require,require_RC4,allow_incoming,enable_retry
+peer_exchange = no 
+port_range = 49600-49600
+use_udp_trackers = no 
+
+min_peers = 40
+max_peers = 100
+max_uploads = 15
+download_rate = 0
+upload_rate = 0

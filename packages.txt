@@ -17,6 +17,7 @@ openssh
 p7zip
 pm-utils
 python
+rtorrent
 tree
 vim
 vlc
