@@ -69,12 +69,12 @@ colorscheme wombat256mod
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
 au FileType fortran let b:commentchar='!'
-au FileType conf,make,python,ruby,sh let b:commentchar='#'
+au FileType conf,make,markdown,python,ruby,sh let b:commentchar='#'
 au FileType plaintex,tex let b:commentchar='%'
 au FileType vim let b:commentchar='"'
 
 " Strip trailing whitespace on save
-autocmd FileType c,conf,cpp,cs,d,fortran,java,javascript,make,md,plaintex,python,ruby,sh,tex,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType c,conf,cpp,cs,d,fortran,java,javascript,make,markdown,plaintex,python,ruby,sh,tex,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 let mapleader=","
 
