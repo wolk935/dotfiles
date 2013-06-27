@@ -1,34 +1,17 @@
 #!/bin/bash
 
-hostname="arch"
-
-kbl="us"
-locale="en_AU.UTF-8 UTF-8"
-timezone="/usr/share/zoneinfo/Australia/Melbourne"
-
 device="sda"
 bootsize="100M"
 swapsize="1024M"
 
 bootfs="ext2"
-rootfs="ext3"
+rootfs="ext4"
 
-base="base base-devel grub-bios"
+base="base base-devel syslinux"
+
 
 function do_chroot() {
-	echo "$hostname" > /mnt/etc/hostname
-	echo 'LANG="'"$locale"'"' > /mnt/etc/locale.conf
-	echo $locale > /mnt/etc/locale.gen
-
-	ln -s $timezone /mnt/etc/localtime
-
-	echo "KEYMAP=$kbl" > /mnt/etc/vconsole.conf
-	echo "FONT=lat9w-16" >> /mnt/etc/vconsole.conf
-	echo "FONT_MAP=8859-1_to_uni" >> /mnt/etc/vconsole.conf
-
 	arch-chroot /mnt << EOF
-locale-gen
-
 mkinitcpio -p linux
 
 modprobe dm-mod
@@ -104,6 +87,5 @@ do_formatting
 do_mount
 do_pacstrap
 do_fstab
-
 do_chroot
 unmount

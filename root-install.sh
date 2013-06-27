@@ -1,9 +1,16 @@
 #!/bin/bash
 
-function create_user() {
+hostname="arch"
+
+kbl="us"
+locale="en_AU.UTF-8 UTF-8"
+timezone="/usr/share/zoneinfo/Australia/Melbourne"
+
+
+function create_nonroot_user() {
 	echo "Enter non-root username:"
 	read username
-	useradd -m -g users -G audio,games,lp,optical,power,scanner,storage,video -s /bin/bash $username
+	useradd -m -g users -s /bin/bash $username
 	passwd $username
 }
 
@@ -16,6 +23,20 @@ function do_drivers() {
 		Intel ) pacman -Sy xf86-video-intel; break;;
 	      esac
 	done
+}
+
+function do_locale() {
+	echo "$hostname" > /etc/hostname
+	echo 'LANG="'"$locale"'"' > /etc/locale.conf
+	echo $locale > /etc/locale.gen
+
+	ln -s $timezone /etc/localtime
+
+	echo "KEYMAP=$kbl" > /etc/vconsole.conf
+	echo "FONT=lat9w-16" >> /etc/vconsole.conf
+	echo "FONT_MAP=8859-1_to_uni" >> /etc/vconsole.conf
+
+	locale-gen
 }
 
 function do_iptables() {
@@ -35,7 +56,7 @@ function do_services() {
 	chmod 700 /etc/systemd/
 }
 
-function do_yaourt() {
+function do_packages() {
 	echo "[archlinuxfr]" >> /etc/pacman.conf
 	echo "SigLevel = Never" >> /etc/pacman.conf
 	echo "Server = http://repo.archlinux.fr/\$arch" >> /etc/pacman.conf
@@ -52,9 +73,10 @@ function update_mirrorlist() {
 	curl "https://www.archlinux.org/mirrorlist/?country=AU" | sed 's/#Server/Server/g' > /etc/pacman.d/mirrorlist
 }
 
+do_locale
 update_mirrorlist
 do_drivers
 do_iptables
 do_services
-do_yaourt
-create_user
+do_packages
+create_nonroot_user
