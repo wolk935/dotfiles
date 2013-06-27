@@ -2,7 +2,6 @@
 
 device="sda"
 bootsize="100M"
-swapsize="1024M"
 
 bootfs="ext2"
 rootfs="ext4"
@@ -13,22 +12,13 @@ base="base base-devel syslinux"
 function do_chroot() {
 	arch-chroot /mnt << EOF
 mkinitcpio -p linux
-
-modprobe dm-mod
-
-grub-install --recheck --debug /dev/"$device"
-
-mkdir -p /boot/grub/locale
-cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
-grub-mkconfig -o /boot/grub/grub.cfg
-
+syslinux-install_update -i -a -m
 EOF
 }
 
 function do_formatting() {
 	mkfs -t "$bootfs" /dev/"$device"1
-	mkswap /dev/"$device"2
-	mkfs -t "$rootfs" /dev/"$device"3
+	mkfs -t "$rootfs" /dev/"$device"2
 }
 
 function do_fstab() {
@@ -36,7 +26,7 @@ function do_fstab() {
 }
 
 function do_mount() {
-	mount /dev/"$device"3 /mnt
+	mount /dev/"$device"2 /mnt
 	mkdir /mnt/boot
 	mount /dev/"$device"1 /mnt/boot
 }
@@ -62,14 +52,6 @@ a
 n
 p
 2
-
-+$swapsize
-t
-2
-82
-n
-p
-3
 
 
 p
