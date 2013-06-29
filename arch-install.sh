@@ -9,14 +9,6 @@ rootfs="ext4"
 base="base base-devel syslinux"
 
 
-function do_chroot() {
-	arch-chroot /mnt << EOF
-mkinitcpio -p linux
-syslinux-install_update -i -a -m
-sed -i "s/sda3/"$device"2/g" /boot/syslinux/syslinux.cfg
-EOF
-}
-
 function do_formatting() {
 	mkfs -t "$bootfs" /dev/"$device"1
 	mkfs -t "$rootfs" /dev/"$device"2
@@ -60,6 +52,11 @@ w
 EOF
 }
 
+function do_syslinux() {
+	syslinux-install_update -c /mnt -i -a -m
+	sed -i "s/sda3/"$device"2/g" /mnt/boot/syslinux/syslinux.cfg
+}
+
 function unmount() {
 	umount /mnt/boot
 	umount /mnt
@@ -70,5 +67,5 @@ do_formatting
 do_mount
 do_pacstrap
 do_fstab
-do_chroot
+do_syslinux
 unmount
