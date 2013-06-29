@@ -6,6 +6,7 @@ ln -si $wd/.bash_profile ~/.bash_profile
 ln -si $wd/.bashrc ~/.bashrc
 ln -si $wd/.gitconfig ~/.gitconfig
 ln -si $wd/.inputrc ~/.inputrc
+ln -sin $wd/.irssi/ ~/.irssi
 ln -si $wd/.rtorrent.rc ~/.rtorrent.rc
 ln -sin $wd/.vim/ ~/.vim
 ln -si $wd/.vimrc ~/.vimrc

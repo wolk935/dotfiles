@@ -10,6 +10,7 @@ git
 google-chrome
 imagemagick
 iptables
+irssi
 lsof
 mesa
 nodejs
