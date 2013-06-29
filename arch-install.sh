@@ -13,6 +13,7 @@ function do_chroot() {
 	arch-chroot /mnt << EOF
 mkinitcpio -p linux
 syslinux-install_update -i -a -m
+sed -i "s/sda3/"$device"2/g" /boot/syslinux/syslinux.cfg
 EOF
 }
 
