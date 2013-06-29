@@ -21,7 +21,51 @@ channels = (
   { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
 );
 
-aliases = {};
+aliases = {
+	J = "join";
+	WJOIN = "join -window";
+	WQUERY = "query -window";
+	LEAVE = "part";
+	BYE = "quit";
+	EXIT = "quit";
+	SIGNOFF = "quit";
+	DESCRIBE = "action";
+	DATE = "time";
+	HOST = "userhost";
+	LAST = "lastlog";
+	SAY = "msg *";
+	WI = "whois";
+	WII = "whois $0 $0";
+	WW = "whowas";
+	W = "who";
+	N = "names";
+	M = "msg";
+	T = "topic";
+	C = "clear";
+	CL = "clear";
+	K = "kick";
+	KB = "kickban";
+	KN = "knockout";
+	BANS = "ban";
+	B = "ban";
+	MUB = "unban *";
+	UB = "unban";
+	IG = "ignore";
+	UNIG = "unignore";
+	SB = "scrollback";
+	UMODE = "mode $N";
+	WC = "window close";
+	WN = "window new hide";
+	SV = "say Irssi $J ($V) - http://irssi.org/";
+	GOTO = "sb goto";
+	CHAT = "dcc chat";
+	RUN = "SCRIPT LOAD";
+	UPTIME = "eval exec - expr `date +%s` - \$F | awk '{print "Irssi uptime: "int(\\\$1/3600/24)"d "int(\\\$1/3600%24)"h "int(\\\$1/60%60)"m "int(\\\$1%60)"s" }'";
+	CALC = "exec - if which bc &amp;&gt;/dev/null\; then echo '$*' | bc | awk '{print "$*="$$1}'\; else echo bc was not found\; fi";
+	SBAR = "STATUSBAR";
+	INVITELIST = "mode $C +I";
+	Q = "QUERY";
+};
 
 statusbar = {
   items = {
