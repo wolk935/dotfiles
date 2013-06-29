@@ -1,6 +1,9 @@
 # interactive bash only
 [ -z "$PS1" ] && return
 
+# aliases
+[[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
+
 # history
 shopt -s histappend
 HISTCONTROL=ignoredups:ignorespace:erasedups
@@ -9,11 +12,6 @@ HISTSIZE=1000000
 
 # wrap after resize
 shopt -s checkwinsize
-
-# aliases
-if [ -f ~/.bash_aliases ]; then
-	source ~/.bash_aliases
-fi
 
 # use colour prompt if available
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
