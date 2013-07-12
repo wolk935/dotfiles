@@ -27,16 +27,15 @@ function do_drivers() {
 
 function do_locale() {
 	echo "$hostname" > /etc/hostname
-	echo 'LANG="'"$locale"'"' > /etc/locale.conf
-	echo $locale > /etc/locale.gen
-
 	ln -s $timezone /etc/localtime
 
 	echo "KEYMAP=$kbl" > /etc/vconsole.conf
 	echo "FONT=lat9w-16" >> /etc/vconsole.conf
 	echo "FONT_MAP=8859-1_to_uni" >> /etc/vconsole.conf
 
+	echo $locale > /etc/locale.gen
 	locale-gen
+	locale > /etc/locale.conf
 }
 
 function do_iptables() {
