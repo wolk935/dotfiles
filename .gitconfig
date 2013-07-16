@@ -1,7 +1,6 @@
 [alias]
 	co = commit
 	st = status
-
 	hist = log --oneline --graph --decorate
 
 [color]
@@ -19,5 +18,3 @@
 
 [push]
 	default = matching
-[merge]
-	tool = meld
