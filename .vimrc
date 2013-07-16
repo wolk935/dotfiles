@@ -49,8 +49,6 @@ nnoremap K <nop>
 vnoremap K <nop>
 
 " Navigate wrapped lines
-nnoremap <down> gj
-nnoremap <up> gk
 nnoremap j gj
 nnoremap k gk
 
