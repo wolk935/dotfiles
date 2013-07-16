@@ -1,3 +1,5 @@
+.config/
+.ssh/
 .vim/.netrwhist
 Downloads/
 workspace/
