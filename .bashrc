@@ -6,9 +6,7 @@
 
 # history
 shopt -s histappend
-HISTCONTROL=ignoredups:ignorespace:erasedups
-HISTFILESIZE=10240000
-HISTSIZE=1000000
+HISTFILE=/dev/null
 
 # wrap after resize
 shopt -s checkwinsize
