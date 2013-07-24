@@ -24,8 +24,10 @@ set noexpandtab
 set shiftwidth=6
 set tabstop=6
 
-" Errors are visual flashing
+" No more epilepsy
+set noerrorbells
 set visualbell
+set t_vb=
 
 " Ignore these files
 set wildignore=*.class,*.o,*.so,*.os,*.pyc
