@@ -4,10 +4,10 @@
 	hist = log --oneline --graph --decorate
 
 [color]
-	branch = true
-	diff = true
-	interactive = true
-	status = true
+	branch = always
+	diff = always
+	interactive = always
+	status = always
 
 [core]
 	editor = vim
