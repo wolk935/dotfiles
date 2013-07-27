@@ -1,5 +1,6 @@
 .cache
 .config/
+.dbus/
 .local/
 .ssh/
 .thumbnails/
