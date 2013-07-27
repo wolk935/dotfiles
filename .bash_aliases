@@ -1,8 +1,6 @@
 alias diff="colordiff"
 alias feh="feh --scale-down"
-alias grep="grep --color=always"
 alias hex="xxd -p"
-alias less="less -R"
 alias ls="ls -a --color=always"
 alias pacman-log="cat /var/log/pacman.log"
 alias reboot="systemctl reboot"

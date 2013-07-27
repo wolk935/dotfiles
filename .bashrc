@@ -4,9 +4,17 @@
 # aliases
 [[ -f ~/.bash_aliases ]] && source ~/.bash_aliases
 
+export EDITOR=vim
+export VISUAL=vim
+
+# color options
+export GREP_OPTIONS='--color=always -I'
+export LESS='--RAW-CONTROL-CHARS'
+
 # history
 shopt -s histappend
-HISTFILE=/dev/null
+export HISTFILE=/dev/null
+export LESSHISTFILE=/dev/null
 
 # wrap after resize
 shopt -s checkwinsize
