@@ -41,14 +41,13 @@ set nowb
 set ttyfast
 
 " Disable arrowkeys navigation
-nnoremap <down> <nop>
-nnoremap <up> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+noremap <down> <nop>
+noremap <up> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
 
 " Disable man lookup
-nnoremap K <nop>
-vnoremap K <nop>
+noremap K <nop>
 
 " Navigate wrapped lines
 nnoremap j gj
