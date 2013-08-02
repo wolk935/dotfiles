@@ -9,7 +9,7 @@ export VISUAL=vim
 
 # color options
 export GREP_OPTIONS='--color=always -I'
-export LESS='--RAW-CONTROL-CHARS  --no-init --quiet --quit-if-one-screen'
+export LESS='--no-init --QUIET --quit-if-one-screen --RAW-CONTROL-CHARS '
 
 # history
 shopt -s histappend
