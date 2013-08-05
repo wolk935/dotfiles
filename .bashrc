@@ -12,7 +12,6 @@ export GREP_OPTIONS='--color=always -I'
 export LESS='--no-init --QUIET --quit-if-one-screen --RAW-CONTROL-CHARS '
 
 # history
-shopt -s histappend
 export HISTFILE=/dev/null
 export LESSHISTFILE=/dev/null
 
