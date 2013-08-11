@@ -1,3 +1,7 @@
+function btcusd() {
+	echo "scale=2; 1/" `curl -s "https://blockchain.info/tobtc?currency=USD&value=1"` | bc -l
+}
+
 alias diff="colordiff"
 alias feh="feh --scale-down"
 alias hex="xxd -p"
