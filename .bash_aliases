@@ -5,6 +5,7 @@ function btcusd() {
 alias diff="colordiff"
 alias feh="feh --scale-down"
 alias hex="xxd -p"
+alias la="ls -lah --color=always"
 alias ls="ls -a --color=always"
 alias pacman-log="cat /var/log/pacman.log"
 alias pw="makepasswd --count 50 --chars "
