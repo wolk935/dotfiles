@@ -1,6 +1,7 @@
 [alias]
 	co = commit
-	st = status
+	d = diff
+	st = status -sb
 	hist = log --oneline --graph --decorate
 
 [color]
