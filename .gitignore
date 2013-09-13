@@ -1,11 +1,6 @@
-.cache
 .config/
-.dbus/
-.local/
 .ssh/
-.thumbnails/
-.viminfo
-.vim/.netrwhist
+.vim/
 .Xauthority
 Downloads/
 workspace/
