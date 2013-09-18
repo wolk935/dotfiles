@@ -8,7 +8,7 @@ function pw() {
 
 alias diff="colordiff"
 alias du="du -d 1"
-alias feh="feh --auto-zoom --scale-down"
+alias feh="feh --auto-zoom --scale-down --image-bg black"
 alias hex="xxd -p"
 alias la="ls -lAh --color=always"
 alias ls="ls -A --color=always"
