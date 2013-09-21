@@ -4,7 +4,7 @@ feh --bg-fill `find ~/Downloads/wallpapers -regex ".+\.\(jpg\|png\)" | sort --ra
 
 for (( i = 0;; ++i )); do
 	if (( i % 30 == 0 )); then
-		btcusd=$(echo "scale=2; 1 / " `curl -s "https://blockchain.info/tobtc?currency=USD&value=1"` | bc -l)
+		btcusd=$(curl -s http://api.bitcoinaverage.com/ticker/USD | sed -n 3p | tr -d ',' | awk '{ print $2 }')
 	fi
 
 	lsop=$(lsof -nPi | tail -n+2 | tr ':' ' ' | awk '{ print $11 }' | sort | uniq -c | tr -d '\n' | tr -s ' ')
