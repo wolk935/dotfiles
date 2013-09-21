@@ -68,6 +68,7 @@ colorscheme wombat256mod
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
 au FileType fortran let b:commentchar='!'
+au FileType haskell let b:commentchar='--'
 au FileType conf,make,markdown,python,ruby,sh let b:commentchar='#'
 au FileType plaintex,tex let b:commentchar='%'
 au FileType vim let b:commentchar='"'
