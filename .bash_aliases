@@ -1,5 +1,5 @@
 function btcusd() {
-	echo "scale=2; 1/" `curl -s "https://blockchain.info/tobtc?currency=USD&value=1"` | bc -l
+	echo `curl -s http://api.bitcoinaverage.com/ticker/USD | sed -n 3p | tr -d ',' | awk '{ print $2 }'`
 }
 
 function pw() {
