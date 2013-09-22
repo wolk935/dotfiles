@@ -1,7 +1,13 @@
 [alias]
 	co = commit
+	com = commit
+	comm = commit
+	commi = commit
 	d = diff
+	di = diff
+	dif = diff
 	st = status -sb
+	his = log --oneline --graph --decorate
 	hist = log --oneline --graph --decorate
 
 [color]
