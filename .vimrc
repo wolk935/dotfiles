@@ -5,8 +5,9 @@ set ignorecase
 set smartcase
 
 " Highlight search as its typed
-"set hlsearch, :noh required to reset highlighting...
+set hlsearch
 set incsearch
+nnoremap <silent> <return> :noh<return>
 
 " Maintain same indentation on new lines
 set autoindent
