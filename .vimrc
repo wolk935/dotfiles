@@ -21,7 +21,9 @@ set showcmd
 set showmode
 
 " Indentation rules
+set joinspaces
 set noexpandtab
+set shiftround
 set shiftwidth=6
 set tabstop=6
 
