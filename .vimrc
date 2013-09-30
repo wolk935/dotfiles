@@ -68,6 +68,9 @@ set t_Co=256
 set background=dark
 colorscheme wombat256mod
 
+" Haskell
+autocmd BufNewFile,BufRead *.hs set expandtab shiftwidth=8 smarttab softtabstop=8 tabstop=8
+
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
 au FileType fortran let b:commentchar='!'
