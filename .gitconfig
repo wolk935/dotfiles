@@ -7,8 +7,15 @@
 	di = diff
 	dif = diff
 	st = status -sb
+	hi = log --oneline --graph --decorate
 	his = log --oneline --graph --decorate
 	hist = log --oneline --graph --decorate
+	ch = checkout
+	che = checkout
+	chec = checkout
+	check = checkout
+	checko = checkout
+	checkou = checkout
 
 [color]
 	branch = always
