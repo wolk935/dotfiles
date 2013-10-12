@@ -25,6 +25,11 @@ servers = (
 	}
 );
 
+settings = {
+	core = { real_name = "Unknown"; user_name = "anon"; nick = "anon"; };
+	"fe-text" = { actlist_sort = "refnum"; };
+};
+
 statusbar = {
 	items = {
 		barstart = "{sbstart}";
@@ -109,9 +114,4 @@ statusbar = {
 			};
 		};
 	};
-};
-
-settings = {
-	core = { real_name = "Unknown"; user_name = "anon"; nick = "anon"; };
-	"fe-text" = { actlist_sort = "refnum"; };
 };
