@@ -5,17 +5,6 @@ aliases = {
 	WC = "window close";
 };
 
-servers = (
-	{
-		address = "irc.freenode.net";
-		chatnet = "freenode";
-		port = "6697";
-		use_ssl = "yes";
-		ssl_verify = "yes";
-		autoconnect = "yes";
-	}
-);
-
 chatnets = {
 	freenode = {
 		type = "IRC";
@@ -28,6 +17,16 @@ channels = (
 	{ name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
 );
 
+servers = (
+	{
+		address = "irc.freenode.net";
+		chatnet = "freenode";
+		port = "6697";
+		use_ssl = "yes";
+		ssl_verify = "yes";
+		autoconnect = "yes";
+	}
+);
 
 statusbar = {
 	items = {
