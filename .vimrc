@@ -67,7 +67,7 @@ set background=dark
 colorscheme wombat256mod
 
 " Haskell
-autocmd BufNewFile,BufRead *.hs set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop=8 tabstop=8
+au BufNewFile,BufRead *.hs set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop=8 tabstop=8
 
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
@@ -78,7 +78,7 @@ au FileType plaintex,tex let b:commentchar='%'
 au FileType vim let b:commentchar='"'
 
 " Strip trailing whitespace on save
-autocmd FileType c,conf,cpp,cs,d,fortran,haskell,java,javascript,make,markdown,plaintex,python,ruby,sh,tex,vim autocmd BufWritePre <buffer> :%s/\s\+$//e
+au FileType c,conf,cpp,cs,d,fortran,haskell,java,javascript,make,markdown,plaintex,python,ruby,sh,tex,vim au BufWritePre <buffer> :%s/\s\+$//e
 
 let mapleader=","
 
