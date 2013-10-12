@@ -5,6 +5,7 @@ aliases = {
 	WC = "window close";
 };
 
+channels = ();
 chatnets = {
 	freenode = {
 		type = "IRC";
@@ -12,10 +13,6 @@ chatnets = {
 		autosendcmd = "/msg nickserv IDENTIFY __REPLACE__";
 	};
 };
-
-channels = (
-	{ name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
-);
 
 servers = (
 	{
