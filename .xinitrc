@@ -1,6 +1,11 @@
 #!/bin/bash
 
 source .bash_aliases
+
+# disable caps lock
+setxkbmap -option ctrl:nocaps
+
+# random wallpaper
 feh --bg-fill `find ~/Downloads/wallpapers -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
 
 for (( i = 0;; ++i )); do
