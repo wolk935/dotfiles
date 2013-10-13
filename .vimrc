@@ -31,7 +31,7 @@ set visualbell
 set t_vb=
 
 " Ignore these files
-set wildignore=*.class,*.o,*.so,*.os,*.pyc
+set wildignore=*.class,*.hi,*.o,*.so,*.os,*.pyc
 
 " Don't worry about backups
 set nobackup
