@@ -47,8 +47,14 @@ noremap <up> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
+" Disable EX mode
+noremap Q <nop>
+
 " Disable man lookup
 noremap K <nop>
+
+" Disable recording
+noremap q <nop>
 
 " Navigate wrapped lines
 nnoremap j gj
