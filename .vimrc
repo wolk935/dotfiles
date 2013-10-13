@@ -63,8 +63,9 @@ nnoremap k gk
 " Find replace in vselection
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
-" Paste replace (into the dead register)
-vmap r "_dP
+" Paste but use dead register
+vmap p "_dp
+vmap P "_dP
 
 " Colorscheme settings
 syntax on
