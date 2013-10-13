@@ -70,12 +70,12 @@ colorscheme wombat256mod
 au BufNewFile,BufRead *.hs set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop=8 tabstop=8
 
 " Define language-specific comment characters
-au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
-au FileType fortran let b:commentchar='!'
-au FileType haskell let b:commentchar='--'
-au FileType conf,make,markdown,python,ruby,sh let b:commentchar='#'
-au FileType plaintex,tex let b:commentchar='%'
-au FileType vim let b:commentchar='"'
+au FileType c,cpp,cs,d,java,javascript let b:commentchar='// '
+au FileType fortran let b:commentchar='! '
+au FileType haskell let b:commentchar='-- '
+au FileType conf,make,markdown,python,ruby,sh let b:commentchar='# '
+au FileType plaintex,tex let b:commentchar='% '
+au FileType vim let b:commentchar='" '
 
 " Strip trailing whitespace on save
 au FileType c,conf,cpp,cs,d,fortran,haskell,java,javascript,make,markdown,plaintex,python,ruby,sh,tex,vim au BufWritePre <buffer> :%s/\s\+$//e
