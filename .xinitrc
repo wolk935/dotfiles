@@ -13,7 +13,7 @@ for (( i = 0;; ++i )); do
 		lbtcusd=$(btcusd)
 	fi
 
-	lsop=$(lsof -nPi | tail -n+2 | tr ':' ' ' | awk '{ print $11 }' | sort | uniq -c | tr -d '\n' | tr -s ' ')
+	lsop=$(ss -natu | tail -n+2 | tr ':' ' ' |  awk '{ print $8 }' | sort | uniq -c | tr -d '\n' | tr -s ' ')
 	dtime=$(date +"%c")
 
 	xsetroot -name "$lsop | $lbtcusd USD | $dtime"
