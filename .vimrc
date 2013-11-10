@@ -56,6 +56,10 @@ noremap K <nop>
 " Disable recording
 noremap q <nop>
 
+" No help
+inoremap <F1> <nop>
+noremap <F1> <nop>
+
 " Navigate wrapped lines
 nnoremap j gj
 nnoremap k gk
@@ -73,8 +77,11 @@ set t_Co=256
 set background=dark
 colorscheme wombat256mod
 
+" Non-annoying paste-mode
+set pastetoggle=<F2>
+
 " Haskell
-au BufNewFile,BufRead *.hs set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop=8 tabstop=8
+au filetype haskell set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop=8 tabstop=8
 
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
