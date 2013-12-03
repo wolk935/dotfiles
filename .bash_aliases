@@ -15,7 +15,8 @@ function wpw() {
 }
 
 alias diff="colordiff"
-alias du="du -d 1"
+alias df="df -h"
+alias du="du -hd 1"
 alias feh="feh --auto-zoom --scale-down --image-bg black"
 alias gpgd="gpg -d"
 alias gpge="gpg -c"
