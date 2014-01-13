@@ -1,4 +1,11 @@
 [alias]
+	ad = add
+	ch = checkout
+	che = checkout
+	chec = checkout
+	check = checkout
+	checko = checkout
+	checkou = checkout
 	co = commit
 	com = commit
 	comm = commit
@@ -6,16 +13,19 @@
 	d = diff
 	di = diff
 	dif = diff
-	st = status -sb
+	h = log --oneline --graph --decorate
 	hi = log --oneline --graph --decorate
 	his = log --oneline --graph --decorate
 	hist = log --oneline --graph --decorate
-	ch = checkout
-	che = checkout
-	chec = checkout
-	check = checkout
-	checko = checkout
-	checkou = checkout
+	reb = rebase
+	reba = rebase
+	rebas = rebase
+	res = reset
+	rese = reset
+	st = status -sb
+	sta = status -sb
+	stat = status -sb
+	statu = status -sb
 
 [color]
 	branch = always
