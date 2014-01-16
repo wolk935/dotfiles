@@ -1,5 +1,5 @@
-function btcaud() {
-	echo `curl -s https://api.bitcoinaverage.com/ticker/AUD/last`
+function btcusd() {
+	echo `curl -s https://api.bitcoinaverage.com/ticker/USD/last`
 }
 
 function myip() {
