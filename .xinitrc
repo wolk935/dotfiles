@@ -10,13 +10,13 @@ feh --bg-fill `find ~/Downloads/wallpapers -regex ".+\.\(jpg\|png\)" | sort --ra
 
 for (( i = 0;; ++i )); do
 	if (( i % 30 == 0 )); then
-		lbtcaud=$(btcaud)
+		lbtcusd=$(btcusd)
 	fi
 
 	lsop=$(ss -natu | tail -n+2 | tr ':' ' ' |  awk '{ print $8 }' | sort | uniq -c | tr -d '\n' | tr -s ' ')
 	dtime=$(date +"%c")
 
-	xsetroot -name "$lsop | $lbtcaud AUD | $dtime"
+	xsetroot -name "$lsop | $lbtcusd usd | $dtime"
 	sleep 1
 done &
 
