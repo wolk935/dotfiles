@@ -16,7 +16,7 @@ for (( i = 0;; ++i )); do
 	lsop=$(ss -natu | tail -n+2 | tr ':' ' ' |  awk '{ print $8 }' | sort | uniq -c | tr -d '\n' | tr -s ' ')
 	dtime=$(date +"%c")
 
-	xsetroot -name "$lsop | $lbtcusd usd | $dtime"
+	xsetroot -name "$lsop | $lbtcusd USD | $dtime"
 	sleep 1
 done &
 
