@@ -19,7 +19,7 @@ export LESSHISTFILE=/dev/null
 shopt -s checkwinsize
 
 # fix buggy bash/irssi
-echo $(tput smkx) > /dev/tty
+echo -n $(tput smkx) > /dev/tty
 
 # use colour prompt if available
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
