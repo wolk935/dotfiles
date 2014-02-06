@@ -1,5 +1,10 @@
 [alias]
 	ad = add
+	bl = branch -avv
+	br = branch
+	bra = branch
+	bran = branch
+	branc = branch
 	ch = checkout
 	che = checkout
 	chec = checkout
