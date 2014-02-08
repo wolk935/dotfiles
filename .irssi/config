@@ -25,6 +25,9 @@ servers = (
 );
 
 settings = {
-	core = { real_name = "Unknown"; user_name = "anon"; nick = "anon"; };
-	"fe-text" = { actlist_sort = "refnum"; };
+	core = {
+		real_name = "Unknown";
+		user_name = "anon";
+		nick = "anon";
+	};
 };
