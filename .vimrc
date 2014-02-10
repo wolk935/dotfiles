@@ -86,7 +86,7 @@ au filetype haskell set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
 au FileType fortran let b:commentchar='!'
-au FileType haskell let b:commentchar='--'
+au FileType haskell,sql let b:commentchar='--'
 au FileType conf,make,markdown,python,r,ruby,sh let b:commentchar='#'
 au FileType plaintex,tex let b:commentchar='%'
 au FileType vim let b:commentchar='"'
