@@ -12,7 +12,12 @@ export GREP_OPTIONS='--color=always -I'
 export LESS='--no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
 
 # history
+shopt -s histappend
+
 export HISTFILE=/dev/null
+export HISTSIZE=0
+export HISTFILESIZE=0
+
 export LESSHISTFILE=/dev/null
 
 # wrap after resize
