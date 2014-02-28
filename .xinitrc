@@ -14,7 +14,7 @@ for (( i = 0;; ++i )); do
 	fi
 
 	lsop=$(ss -natu | tail -n+2 | tr ':' ' ' |  awk '{ print $8 }' | sort | uniq -c | tr -d '\n' | tr -s ' ')
-	dtime=$(date +"%c")
+	dtime=$(date +"%a %b %d %T")
 
 	xsetroot -name "$lsop | $lbtcusd USD | $dtime"
 	sleep 1
