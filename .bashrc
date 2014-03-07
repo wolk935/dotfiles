@@ -17,6 +17,7 @@ shopt -s histappend
 export HISTFILE=/dev/null
 export HISTSIZE=0
 export HISTFILESIZE=0
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 export LESSHISTFILE=/dev/null
 
