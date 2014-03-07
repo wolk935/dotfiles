@@ -2,6 +2,10 @@ function btcusd() {
 	echo `curl -s https://api.bitcoinaverage.com/ticker/USD/last`
 }
 
+function hist10() {
+	cat .bash_history | sort | uniq -c | sort | tail -n10
+}
+
 function myip() {
 	curl -s http://checkip.dyndns.org/ | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'
 }
