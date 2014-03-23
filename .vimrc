@@ -83,6 +83,9 @@ set pastetoggle=<F2>
 " Haskell
 au filetype haskell set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop=8 tabstop=8
 
+" Javascript
+au filetype javascript set expandtab nojoinspaces shiftwidth=2 smarttab softtabstop=2 tabstop=2
+
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
 au FileType fortran let b:commentchar='!'
