@@ -6,6 +6,7 @@
 	ch = checkout
 	co = commit
 	coa = commit --amend
+	kleenex = clean -df
 	d = diff
 	dc = diff --cached
 	diffc = diff --cached
