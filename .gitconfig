@@ -1,36 +1,25 @@
 [alias]
-	ad = add
+	a = add
 	bl = branch -avv
 	br = branch
-	bra = branch
-	bran = branch
-	branc = branch
+	chb = checkout -b
 	ch = checkout
-	che = checkout
-	chec = checkout
-	check = checkout
-	checko = checkout
-	checkou = checkout
 	co = commit
-	com = commit
-	comm = commit
-	commi = commit
+	coa = commit --amend
 	d = diff
-	di = diff
-	dif = diff
+	dc = diff --cached
+	diffc = diff --cached
+	dl = diff HEAD~1
+	diffl = diff HEAD~1
 	h = log --oneline --graph --decorate
-	hi = log --oneline --graph --decorate
-	his = log --oneline --graph --decorate
 	hist = log --oneline --graph --decorate
-	reb = rebase
-	reba = rebase
-	rebas = rebase
-	res = reset
-	rese = reset
+	rb = rebase
+	rbi = rebase --interactive
+	stap = stash apply
+	std = stash drop
+	stl = stash list
 	st = status -sb
-	sta = status -sb
-	stat = status -sb
-	statu = status -sb
+	wipe = reset --hard
 
 [color]
 	branch = always
@@ -43,7 +32,7 @@
 
 [user]
 	name = Daniel Cousens
-	email = daniel210x@gmail.com
+	email = github@dcousens.com
 
 [push]
 	default = matching
