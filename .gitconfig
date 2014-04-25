@@ -6,9 +6,12 @@
 	ch = checkout
 	co = commit
 	coa = commit --amend
+	com = commit -m
 	kleenex = clean -df
 	d = diff
+	dif = diff
 	dc = diff --cached
+	difc = diff --cached
 	diffc = diff --cached
 	dl = diff HEAD~1
 	diffl = diff HEAD~1
@@ -19,7 +22,9 @@
 	stap = stash apply
 	std = stash drop
 	stl = stash list
+	stp = stash pop
 	st = status -sb
+	track = branch --set-upstream-to=
 	wipe = reset --hard
 
 [color]
