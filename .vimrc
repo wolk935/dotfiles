@@ -1,3 +1,10 @@
+call plug#begin('~/.vim/plugged')
+
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
 set nocompatible
 
 " Search ignores case, unless case is specified
