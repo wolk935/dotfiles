@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
+Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
