@@ -12,6 +12,9 @@ set nocompatible
 set ignorecase
 set smartcase
 
+" Ignore case for autocompletion
+set wildignorecase
+
 " Highlight search as its typed
 set incsearch
 
