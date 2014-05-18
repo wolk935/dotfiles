@@ -7,7 +7,7 @@ function btcusd() {
 }
 
 function hist10() {
-	cat .bash_history | sort | uniq -c | sort | tail -n10
+	cat ~/.bash_history | sort | uniq -c | sort | tail -n10
 }
 
 function myip() {
