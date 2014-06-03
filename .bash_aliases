@@ -14,6 +14,10 @@ function myip() {
 	curl -s http://checkip.dyndns.org/ | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'
 }
 
+function prepend() {
+	cat - $1 <<< $2 > /tmp/prepend$$.tmp && mv /tmp/prepend$$.tmp "$1"
+}
+
 function pw() {
 	echo `cat /dev/urandom | base64 | head -c $1`
 }
