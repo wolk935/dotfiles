@@ -9,18 +9,21 @@ export VISUAL=vim
 
 # color options
 export GREP_OPTIONS='--color=always -I'
-export LESS='--no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
+export LESS='--no-init --quit-if-one-screen --raw-control-chars'
 
 # history
 shopt -s histappend
 
 export HISTCONTROL=ignoredups:erasedups
-export HISTFILE=/dev/null
-export HISTSIZE=0
-export HISTFILESIZE=0
+export HISTFILE=~/.bash_history
+export HISTSIZE=102400
+export HISTFILESIZE=102400
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 export LESSHISTFILE=/dev/null
+
+export GOPATH=~/workspace/go
+export PATH=$PATH:$GOPATH/bin
 
 # wrap after resize
 shopt -s checkwinsize
