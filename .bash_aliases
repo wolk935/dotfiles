@@ -22,6 +22,12 @@ function pw() {
 	echo `cat /dev/urandom | base64 | head -c $1`
 }
 
+function randomMAC() {
+	ip link set dev $1 down
+	ip link set dev $1 address `hexdump -n3 -e'/3 "00:60:2F" 3/1 ":%02X"' /dev/urandom`
+	ip link set dev $1 up
+}
+
 function wpw() {
 	shuf --random-source=/dev/urandom -n$1 /usr/share/dict/cracklib-small 
 }
