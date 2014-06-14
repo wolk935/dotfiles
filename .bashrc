@@ -14,6 +14,9 @@ export LESS='--no-init --quit-if-one-screen --raw-control-chars'
 # history
 shopt -s histappend
 
+# UTF-8 aware
+export LC_ALL=en_AU.UTF-8
+
 export HISTCONTROL=ignoredups:erasedups
 export HISTFILE=~/.bash_history
 export HISTSIZE=102400
