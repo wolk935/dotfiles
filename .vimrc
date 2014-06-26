@@ -122,6 +122,3 @@ map <leader>C :s/^\V<C-R>=escape(b:commentchar,'\/')<CR>//g<CR>
 
 " Less tears
 nnoremap ; :
-
-" Transitionary tears
-nnoremap : <nop>
