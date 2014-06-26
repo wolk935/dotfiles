@@ -36,9 +36,9 @@ set shiftround
 set shiftwidth=4
 set tabstop=4
 
-" No more epilepsy
+" No epilepsy
 set noerrorbells
-set visualbell
+set novisualbell
 set t_vb=
 
 " Ignore these files
@@ -75,6 +75,8 @@ inoremap <F1> <nop>
 noremap <F1> <nop>
 
 " Navigate wrapped lines
+set linebreak
+set wrap
 nnoremap j gj
 nnoremap k gk
 
@@ -99,6 +101,7 @@ au filetype haskell set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop
 
 " Javascript
 au filetype javascript set expandtab nojoinspaces shiftwidth=2 smarttab softtabstop=2 tabstop=2
+au filetype javascript set nocindent
 
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
