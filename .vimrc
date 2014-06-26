@@ -58,6 +58,9 @@ noremap <up> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
 
+" Disable space bar normally
+noremap <space> <nop>
+
 " Disable EX mode
 noremap Q <nop>
 
@@ -108,8 +111,14 @@ au FileType vim let b:commentchar='"'
 " Strip trailing whitespace on save
 au FileType c,conf,cpp,cs,d,fortran,haskell,java,javascript,make,markdown,plaintex,python,ruby,sh,tex,vim au BufWritePre <buffer> :%s/\s\+$//e
 
+" Define mappings for mass-line commenting
 let mapleader=","
 
-" Define mappings for mass-line commenting
 map <leader>c :s/^/<C-R>=escape(b:commentchar,'\/')<CR>/g<CR>
 map <leader>C :s/^\V<C-R>=escape(b:commentchar,'\/')<CR>//g<CR>
+
+" Less tears
+nnoremap ; :
+
+" Transitionary tears
+nnoremap : <nop>
