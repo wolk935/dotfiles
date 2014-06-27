@@ -2,11 +2,16 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
 Plug 'godlygeek/tabular'
+Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/AutoComplPop'
 
 call plug#end()
 
 set nocompatible
+
+" Auto-complete with Tab
+inoremap <expr> <Tab> pumvisible() ? "\<Enter>" : "\<Tab>"
 
 " Search ignores case, unless case is specified
 set ignorecase
@@ -14,6 +19,9 @@ set smartcase
 
 " Ignore case for autocompletion
 set wildignorecase
+
+" Always show autocomplete menu, always complete to longest first
+set completeopt=longest,menuone
 
 " Highlight search as its typed
 set incsearch
