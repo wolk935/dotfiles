@@ -13,7 +13,10 @@
 	diffc = diff --cached
 	dl = diff HEAD~1
 	diffl = diff HEAD~1
+	f = fetch
 	h = log --oneline --graph --decorate
+	p = push
+	pom = push origin master
 	rb = rebase
 	rba = rebase --abort
 	rbc = rebase --continue
