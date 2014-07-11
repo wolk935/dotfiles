@@ -81,7 +81,7 @@ inoremap <F1> <nop>
 noremap <F1> <nop>
 
 " Navigate wrapped lines
-set linebreak
+set nolinebreak
 set wrap
 nnoremap j gj
 nnoremap k gk
