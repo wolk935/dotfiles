@@ -5,6 +5,7 @@ Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
