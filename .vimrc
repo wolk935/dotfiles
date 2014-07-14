@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
-Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
