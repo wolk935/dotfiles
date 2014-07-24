@@ -16,6 +16,7 @@
 	f = fetch
 	h = log --oneline --graph --decorate
 	p = push
+	poh = push origin HEAD
 	pom = push origin master
 	rb = rebase
 	rba = rebase --abort
