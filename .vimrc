@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
+Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
@@ -127,3 +128,6 @@ map <leader>C :s/^\V<C-R>=escape(b:commentchar,'\/')<CR>//g<CR>
 
 " Less tears
 nnoremap ; :
+
+" Syntastic jshintrc
+let g:syntastic_javascript_jshint_args = "--config ~/.jshintrc"
