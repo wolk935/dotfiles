@@ -1,3 +1,11 @@
+function aes256cbcc() {
+	openssl aes-256-cbc -e -in $1 -out $1.aes
+}
+
+function aes256cbcd() {
+	openssl aes-256-cbc -d -in $1 -out `basename --suffix .aes $1`
+}
+
 function btcaddrbal() {
 	echo `curl -s https://blockchain.info/q/addressbalance/$1`
 }
