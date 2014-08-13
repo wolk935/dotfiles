@@ -23,6 +23,7 @@
 	rbc = rebase --continue
 	rbi = rebase --interactive
 	rh = reset --hard
+	rv = remote --verbose
 	stap = stash apply
 	std = stash drop
 	stl = stash list
