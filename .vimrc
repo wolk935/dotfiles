@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
+Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'scrooloose/syntastic'
