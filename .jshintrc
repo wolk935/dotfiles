@@ -13,7 +13,6 @@
   "immed": true,
   "indent": 2,
   "latedef": true,
-  "maxcomplexity": 10,
   "noarg": true,
   "noempty": true,
   "nonbsp": true,
