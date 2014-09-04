@@ -1,6 +1,8 @@
 {
   "asi": true,
+  "browser": true,
   "camelcase": true,
+  "devel": true,
   "freeze": true,
   "globals": {
     "after": false,
@@ -8,8 +10,7 @@
     "before": false,
     "beforeEach": false,
     "describe": false,
-    "it": false,
-    "window": false
+    "it": false
   },
   "immed": true,
   "indent": 2,
