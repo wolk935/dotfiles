@@ -22,7 +22,7 @@
   "nonbsp": true,
   "nonew": true,
   "strict": false,
-  "trailing": true
+  "trailing": true,
   "undef": true,
-  "unused": true,
+  "unused": true
 }
