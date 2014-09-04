@@ -15,13 +15,14 @@
   "immed": true,
   "indent": 2,
   "latedef": true,
+  "newcap": true,
   "noarg": true,
+  "node": true,
   "noempty": true,
   "nonbsp": true,
-  "node": true,
   "nonew": true,
-  "undef": true,
-  "unused": true,
   "strict": false,
   "trailing": true
+  "undef": true,
+  "unused": true,
 }
