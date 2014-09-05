@@ -110,6 +110,10 @@ au filetype haskell set expandtab nojoinspaces shiftwidth=8 smarttab softtabstop
 au filetype javascript set expandtab nojoinspaces shiftwidth=2 smarttab softtabstop=2 tabstop=2
 au filetype javascript set nocindent
 
+" JSON
+au filetype json set expandtab nojoinspaces shiftwidth=2 smarttab softtabstop=2 tabstop=2
+au filetype json set nocindent
+
 " Define language-specific comment characters
 au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
 au FileType fortran let b:commentchar='!'
@@ -119,7 +123,7 @@ au FileType plaintex,tex let b:commentchar='%'
 au FileType vim let b:commentchar='"'
 
 " Strip trailing whitespace on save
-au FileType c,conf,cpp,cs,d,fortran,haskell,java,javascript,make,markdown,plaintex,python,ruby,sh,tex,vim au BufWritePre <buffer> :%s/\s\+$//e
+au FileType c,conf,cpp,cs,d,fortran,haskell,java,javascript,json,make,markdown,plaintex,python,ruby,sh,tex,vim au BufWritePre <buffer> :%s/\s\+$//e
 
 " Define mappings for mass-line commenting
 let mapleader=","
