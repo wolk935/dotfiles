@@ -10,6 +10,10 @@ function btcaddrbal() {
 	echo `curl -s https://blockchain.info/q/addressbalance/$1`
 }
 
+function btcaud() {
+	echo `curl -s https://api.bitcoinaverage.com/ticker/AUD/last`
+}
+
 function btcusd() {
 	echo `curl -s https://api.bitcoinaverage.com/ticker/USD/last`
 }
