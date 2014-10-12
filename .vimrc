@@ -97,9 +97,11 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 vmap p "_dp
 vmap P "_dP
 
-" Colorscheme settings
-syntax on
+" Terminal 256 colour
 set t_Co=256
+
+" Colorscheme settings
+syntax enable
 set background=dark
 colorscheme wombat256mod
 
