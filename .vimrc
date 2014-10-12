@@ -68,6 +68,9 @@ noremap <right> <nop>
 " Disable space bar normally
 noremap <space> <nop>
 
+" Disable EOL append
+nnoremap A a
+
 " Disable EX mode
 noremap Q <nop>
 
