@@ -1,8 +1,8 @@
 [alias]
 	a = add
+	ad = add
 	bl = branch -avv
 	br = branch
-	cdf = clean -df
 	chb = checkout -b
 	ch = checkout
 	co = commit
@@ -10,9 +10,7 @@
 	com = commit -m
 	d = diff
 	dc = diff --cached
-	diffc = diff --cached
 	dl = diff HEAD~1
-	diffl = diff HEAD~1
 	f = fetch
 	h = log --oneline --graph --decorate
 	p = push
@@ -22,7 +20,6 @@
 	rba = rebase --abort
 	rbc = rebase --continue
 	rbi = rebase --interactive
-	rh = reset --hard
 	rv = remote --verbose
 	stap = stash apply
 	std = stash drop
