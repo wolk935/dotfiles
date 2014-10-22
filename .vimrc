@@ -146,7 +146,7 @@ let g:syntastic_javascript_jshint_args="--config ~/.jshintrc"
 
 " Git Gutter fixes
 hi clear SignColumn
-hi GitGutterAdd guibg=0
-hi GitGutterChange guibg=0
-hi GitGutterDelete guibg=0
-hi GitGutterChangeDelete guibg=0
+hi GitGutterAdd ctermbg=none
+hi GitGutterChange ctermbg=none
+hi GitGutterDelete ctermbg=none
+hi GitGutterChangeDelete ctermbg=none
