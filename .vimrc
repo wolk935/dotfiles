@@ -1,9 +1,11 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'JulesWang/css.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
+Plug 'genoma/vim-less'
 Plug 'godlygeek/tabular'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
@@ -60,6 +62,10 @@ set nowb
 " Fast terminal connection
 set ttyfast
 
+" Easier shifting
+vnoremap , <
+vnoremap . >
+
 " Disable arrowkeys navigation
 noremap <down> <nop>
 noremap <up> <nop>
@@ -110,7 +116,7 @@ colorscheme wombat256mod
 set pastetoggle=<F2>
 
 " Define language-specific comment characters
-au FileType c,cpp,cs,d,java,javascript let b:commentchar='//'
+au FileType c,cpp,cs,d,java,javascript,less let b:commentchar='//'
 au FileType fortran let b:commentchar='!'
 au FileType haskell,sql let b:commentchar='--'
 au FileType conf,make,markdown,python,r,ruby,sh let b:commentchar='#'
@@ -118,7 +124,7 @@ au FileType plaintex,tex let b:commentchar='%'
 au FileType vim let b:commentchar='"'
 
 " Strip trailing whitespace on save
-au FileType c,conf,cpp,cs,d,fortran,haskell,java,javascript,json,make,markdown,plaintex,python,ruby,sh,tex,vim au BufWritePre <buffer> :%s/\s\+$//e
+au FileType c,conf,cpp,cs,d,fortran,haskell,html,less,java,javascript,json,make,markdown,plaintex,python,ruby,sh,tex,vim,xml au BufWritePre <buffer> :%s/\s\+$//e
 
 " Define mappings for mass-line commenting
 let mapleader=","
@@ -132,6 +138,9 @@ vnoremap ; :
 
 " Syntastic jshintrc
 let g:syntastic_javascript_jshint_args="--config ~/.jshintrc"
+
+" Syntastic C++
+let g:syntastic_cpp_compiler_options = '-pedantic -std=c++14 -W -Wall -Wcast-qual -Wconversion -Wextra -Wfatal-errors -Wwrite-strings'
 
 " Git Gutter fixes
 hi clear SignColumn
