@@ -16,6 +16,7 @@
 	p = push
 	poh = push origin HEAD
 	pom = push origin master
+	pur = pull --rebase
 	rb = rebase
 	rba = rebase --abort
 	rbc = rebase --continue
