@@ -5,15 +5,12 @@
 	br = branch
 	chb = checkout -b
 	ch = checkout
-	co = commit
 	coa = commit --amend
 	com = commit -m
 	d = diff
 	dc = diff --cached
 	dl = diff HEAD~1
-	f = fetch
 	h = log --oneline --graph --decorate
-	p = push
 	poh = push origin HEAD
 	pom = push origin master
 	pur = pull --rebase
