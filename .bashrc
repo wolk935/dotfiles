@@ -7,10 +7,6 @@
 export EDITOR=vim
 export VISUAL=vim
 
-# color options
-export GREP_OPTIONS='--color -I'
-export LESS='--no-init --quit-if-one-screen --raw-control-chars'
-
 # history
 shopt -s histappend
 
