@@ -138,6 +138,7 @@ vnoremap ; :
 
 " Syntastic jshintrc
 let g:syntastic_javascript_jshint_args="--config ~/.jshintrc"
+let g:syntastic_javascript_checkers=["jsxhint", "jshint"]
 
 " Syntastic C++
 let g:syntastic_cpp_compiler_options = '-pedantic -std=c++14 -W -Wall -Wcast-qual -Wconversion -Wextra -Wfatal-errors -Wwrite-strings'
