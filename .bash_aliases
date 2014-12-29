@@ -6,18 +6,6 @@ function aes256cbcd() {
 	openssl aes-256-cbc -d -in $1 -out `basename --suffix .aes $1`
 }
 
-function btcaddrbal() {
-	echo `curl -s https://blockchain.info/q/addressbalance/$1`
-}
-
-function btcaud() {
-	echo `curl -s https://api.bitcoinaverage.com/ticker/AUD/last`
-}
-
-function btcusd() {
-	echo `curl -s https://api.bitcoinaverage.com/ticker/USD/last`
-}
-
 function hist10() {
 	cat ~/.bash_history | sort | uniq -c | sort -n | tail -n10
 }
@@ -41,25 +29,23 @@ function randomMAC() {
 }
 
 function wpw() {
-	shuf --random-source=/dev/urandom -n$1 /usr/share/dict/cracklib-small 
+	shuf --random-source=/dev/urandom -n$1 /usr/share/dict/cracklib-small | tr '\n' ' '
 }
 
 alias diff="colordiff"
 alias df="df -h"
 alias du="du -hd 1"
-alias feh="feh --auto-zoom --scale-down --image-bg black"
+alias feh="feh --auto-zoom --image-bg black --scale-down"
 alias gpgc="gpg -cq"
 alias gpgd="gpg -dq"
 alias grep="grep --color -I"
 alias hex="od -A n -x | tr -d ' \n'"
 alias la="ls -lAh --color=auto"
 alias ls="ls -A --color=auto"
-alias less="less --no-init --quit-if-one-screen --raw-control-chars"
-alias rand="cat /dev/random"
+alias less="less --no-init --raw-control-chars --quit-if-one-screen"
 alias reboot="systemctl reboot"
 alias shutdown="systemctl poweroff"
 alias suspend="systemctl suspend"
 alias tolower="tr '[:upper:]' '[:lower:]'"
 alias toupper="tr '[:lower:]' '[:upper:]'"
-alias urand="cat /dev/urandom"
 alias vi="vim"
