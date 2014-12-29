@@ -10,7 +10,7 @@ feh --bg-fill `find ~/Downloads/wallpapers -regex ".+\.\(jpg\|png\)" | sort --ra
 
 for (( i = 0;; ++i )); do
 	if (( i % 30 == 0 )); then
-		lbtcusd=$(btcusd)
+		lbtcusd=$(curl -s https://api.bitcoinaverage.com/ticker/USD/last)
 	fi
 
 	ipaddr=$(ip -o -4 addr | awk '{ print $4 }' | tail -n1)
