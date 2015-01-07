@@ -11,8 +11,8 @@
 	dc = diff --cached
 	dl = diff HEAD~1
 	h = log --oneline --graph --decorate
-	poh = push origin HEAD
-	pom = push origin master
+	poh = push origin HEAD --tags
+	pom = push origin master --tags
 	pur = pull --rebase
 	rb = rebase
 	rba = rebase --abort
