@@ -116,10 +116,10 @@ colorscheme wombat256mod
 set pastetoggle=<F2>
 
 " Define language-specific comment characters
-au FileType c,cpp,cs,d,java,javascript,less let b:commentchar='//'
+au FileType c,cpp,cs,d,java,less let b:commentchar='//'
 au FileType fortran let b:commentchar='!'
-au FileType haskell,sql let b:commentchar='--'
-au FileType conf,make,markdown,python,r,ruby,sh let b:commentchar='#'
+au FileType sql let b:commentchar='--'
+au FileType conf,make,markdown,r,ruby,sh let b:commentchar='#'
 au FileType plaintex,tex let b:commentchar='%'
 au FileType vim let b:commentchar='"'
 

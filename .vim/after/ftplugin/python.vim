@@ -1,3 +1,5 @@
+let b:commentchar='#'
+
 setlocal joinspaces
 setlocal noexpandtab
 setlocal shiftround

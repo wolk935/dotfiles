@@ -1,3 +1,5 @@
+let b:commentchar='//'
+
 setlocal expandtab
 setlocal nojoinspaces
 setlocal shiftwidth=2
