@@ -93,7 +93,7 @@ noremap <F1> <nop>
 
 " Navigate wrapped lines
 set nolinebreak
-set wrap
+set nowrap
 nnoremap j gj
 nnoremap k gk
 
