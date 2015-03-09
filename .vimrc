@@ -124,7 +124,7 @@ au FileType plaintex,tex let b:commentchar='%'
 au FileType vim let b:commentchar='"'
 
 " Strip trailing whitespace on save
-au FileType c,conf,cpp,cs,d,fortran,haskell,html,less,java,javascript,json,make,markdown,plaintex,python,ruby,sh,tex,vim,xml au BufWritePre <buffer> :%s/\s\+$//e
+au FileType c,conf,cpp,cs,d,fortran,haskell,html,less,java,javascript,json,make,markdown,plaintex,python,ruby,sh,sql,tex,vim,xml au BufWritePre <buffer> :%s/\s\+$//e
 
 " Define mappings for mass-line commenting
 let mapleader=","
