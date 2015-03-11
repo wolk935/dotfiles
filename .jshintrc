@@ -15,7 +15,7 @@
   },
   "immed": true,
   "indent": 2,
-  "latedef": true,
+  "latedef": "nofunc",
   "newcap": false,
   "noarg": true,
   "node": true,
