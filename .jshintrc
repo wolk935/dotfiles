@@ -3,6 +3,7 @@
   "browser": true,
   "camelcase": true,
   "devel": true,
+  "esnext": true,
   "freeze": true,
   "globals": {
     "after": false,
