@@ -5,6 +5,9 @@
 	br = branch
 	chb = checkout -b
 	ch = checkout
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
 	coa = commit --amend
 	com = commit -m
 	d = diff
