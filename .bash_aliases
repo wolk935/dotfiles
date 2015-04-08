@@ -14,6 +14,14 @@ function myip() {
 	curl -s http://checkip.dyndns.org/ | grep -Eo '\<[[:digit:]]{1,3}(\.[[:digit:]]{1,3}){3}\>'
 }
 
+function max() {
+	echo -en "$*" | tr " " "\n" | sort -gr | head -n1
+}
+
+function min() {
+	echo -en "$*" | tr " " "\n" | sort -g | head -n1
+}
+
 function prepend() {
 	cat - $1 <<< $2 > /tmp/prepend$$.tmp && mv /tmp/prepend$$.tmp "$1"
 }
