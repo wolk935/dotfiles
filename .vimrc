@@ -137,7 +137,6 @@ nnoremap ; :
 vnoremap ; :
 
 " Syntastic jshintrc
-let g:syntastic_javascript_jshint_args="--config ~/.jshintrc"
 let g:syntastic_javascript_checkers=["jsxhint", "jshint"]
 
 " Syntastic C++
