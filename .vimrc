@@ -116,18 +116,18 @@ colorscheme wombat256mod
 set pastetoggle=<F2>
 
 " Define language-specific comment characters
-au FileType c,cpp,cs,d,java,less let b:commentchar='//'
-au FileType fortran let b:commentchar='!'
-au FileType sql let b:commentchar='--'
-au FileType conf,make,markdown,r,ruby,sh let b:commentchar='#'
-au FileType plaintex,tex let b:commentchar='%'
-au FileType vim let b:commentchar='"'
+au FileType c,cpp,cs,d,java,less let b:commentchar = '//'
+au FileType fortran let b:commentchar = '!'
+au FileType sql let b:commentchar = '--'
+au FileType conf,make,markdown,r,ruby,sh let b:commentchar = '#'
+au FileType plaintex,tex let b:commentchar = '%'
+au FileType vim let b:commentchar = '"'
 
 " Strip trailing whitespace on save
 au FileType c,conf,cpp,cs,d,fortran,haskell,html,less,java,javascript,json,make,markdown,plaintex,python,ruby,sh,sql,tex,vim,xml au BufWritePre <buffer> :%s/\s\+$//e
 
 " Define mappings for mass-line commenting
-let mapleader=","
+let mapleader = ','
 
 map <leader>c :s/^/<C-R>=escape(b:commentchar,'\/')<CR>/g<CR>
 map <leader>C :s/^\V<C-R>=escape(b:commentchar,'\/')<CR>//g<CR>
@@ -143,7 +143,7 @@ let g:syntastic_c_compiler_options = '-pedantic -std=gnu99 -W -Wall -Wcast-qual 
 let g:syntastic_cpp_compiler_options = '-pedantic -std=c++14 -W -Wall -Wcast-qual -Wconversion -Wextra -Wfatal-errors -Wwrite-strings'
 
 " Syntastic jshintrc
-let g:syntastic_javascript_checkers=["jsxhint", "jshint"]
+let g:syntastic_javascript_checkers = ['jsxhint', 'jshint']
 
 " Git Gutter fixes
 hi clear SignColumn
