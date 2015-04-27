@@ -13,6 +13,7 @@
 	d = diff
 	dc = diff --cached
 	dl = diff HEAD~1
+	f = fetch
 	h = log --oneline --graph --decorate
 	poh = push origin HEAD --tags
 	pur = pull --rebase origin HEAD
