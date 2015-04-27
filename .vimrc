@@ -136,14 +136,14 @@ map <leader>C :s/^\V<C-R>=escape(b:commentchar,'\/')<CR>//g<CR>
 nnoremap ; :
 vnoremap ; :
 
-" Syntastic jshintrc
-let g:syntastic_javascript_checkers=["jsxhint", "jshint"]
+" Syntastic C
+let g:syntastic_c_compiler_options = '-pedantic -std=gnu99 -W -Wall -Wcast-qual -Wconversion -Wextra -Wfatal-errors'
 
 " Syntastic C++
 let g:syntastic_cpp_compiler_options = '-pedantic -std=c++14 -W -Wall -Wcast-qual -Wconversion -Wextra -Wfatal-errors -Wwrite-strings'
 
-" Syntastic C
-let g:syntastic_c_compiler_options = '-pedantic -std=gnu99 -W -Wall -Wcast-qual -Wconversion -Wextra -Wfatal-errors'
+" Syntastic jshintrc
+let g:syntastic_javascript_checkers=["jsxhint", "jshint"]
 
 " Git Gutter fixes
 hi clear SignColumn
