@@ -5,14 +5,6 @@
   "devel": true,
   "esnext": true,
   "freeze": true,
-  "globals": {
-    "after": false,
-    "afterEach": false,
-    "before": false,
-    "beforeEach": false,
-    "describe": false,
-    "it": false
-  },
   "immed": true,
   "indent": 2,
   "latedef": "nofunc",
