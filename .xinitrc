@@ -2,7 +2,7 @@
 
 source .bash_aliases
 
-# disable caps lock
+# disable caps lock, set as CTRL
 setxkbmap -option ctrl:nocaps
 
 # random wallpaper
