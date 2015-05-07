@@ -153,5 +153,5 @@ hi GitGutterDelete ctermbg=none
 hi GitGutterChangeDelete ctermbg=none
 
 augroup Example
-	au! BufRead,BufNewFile,BufEnter /home/daniel/workspace/example/*.js set noexpandtab
+	au! BufRead,BufNewFile,BufEnter /home/daniel/workspace/example/* set noexpandtab
 augroup END
