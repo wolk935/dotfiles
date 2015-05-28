@@ -22,7 +22,8 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 export LESSHISTFILE=/dev/null
 
 export GOPATH=~/workspace/go
-export PATH=$PATH:$GOPATH/bin
+export NODE_PATH=~/workspace/npm
+export PATH=$PATH:$GOPATH/bin:$NODE_PATH/bin
 
 # wrap after resize
 shopt -s checkwinsize
