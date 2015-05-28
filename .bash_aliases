@@ -30,6 +30,10 @@ function pw() {
 	echo `cat /dev/urandom | base64 | head -c $1`
 }
 
+function gpw() {
+	gpg --quiet --decrypt FIXME | grep --only-matching "$1"
+}
+
 function randomMAC() {
 	ip link set dev $1 down
 	ip link set dev $1 address `hexdump -n3 -e'/3 "00:60:2F" 3/1 ":%02X"' /dev/urandom`
@@ -44,8 +48,8 @@ alias diff="colordiff"
 alias df="df -h"
 alias du="du -hd 1"
 alias feh="feh --auto-zoom --image-bg black --scale-down"
-alias gpgc="gpg -cq"
-alias gpgd="gpg -dq"
+alias gpgc="gpg --symmetric --quiet"
+alias gpgd="gpg --decrypt --quiet"
 alias grep="grep --color -I"
 alias hex="od -A n -x | tr -d ' \n'"
 alias la="ls -lAh --color=auto"
