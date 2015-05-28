@@ -31,7 +31,7 @@ function pw() {
 }
 
 function gpw() {
-	gpg --quiet --decrypt FIXME | grep --only-matching "$1"
+	gpg --quiet --decrypt FIXME | grep "$1"
 }
 
 function randomMAC() {
