@@ -1,4 +1,5 @@
 .config/chromium
+.npmrc
 .ssh/
 .vim
 Downloads/
