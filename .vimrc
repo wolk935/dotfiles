@@ -8,7 +8,6 @@ Plug 'ervandew/supertab'
 Plug 'genoma/vim-less'
 Plug 'godlygeek/tabular'
 Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
 call plug#end()
