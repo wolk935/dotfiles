@@ -135,6 +135,9 @@ map <leader>C :s/^\V<C-R>=escape(b:commentchar,'\/')<CR>//g<CR>
 nnoremap ; :
 vnoremap ; :
 
+" Airline configuration
+let g:airline#extensions#tabline#enabled = 1
+
 " Syntastic C
 let g:syntastic_c_compiler_options = '-pedantic -std=gnu99 -W -Wall -Wcast-qual -Wconversion -Wextra -Wfatal-errors'
 
