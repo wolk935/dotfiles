@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'JulesWang/css.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'chrisbra/csv.vim'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'genoma/vim-less'
