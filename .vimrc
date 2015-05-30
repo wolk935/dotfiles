@@ -131,6 +131,12 @@ noremap <C-k> <C-y>
 noremap <C-e> <nop>
 noremap <C-y> <nop>
 
+" Remap quick-exit
+noremap qq ZZ
+noremap qe ZQ
+noremap ZZ <nop>
+noremap ZQ <nop>
+
 " Find replace in vselection
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
