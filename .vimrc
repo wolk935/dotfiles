@@ -35,7 +35,7 @@ set autoindent
 set ruler
 
 " Always show status line
-set laststatus=1
+set laststatus=2
 set showcmd
 set showmode
 
