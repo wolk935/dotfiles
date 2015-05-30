@@ -76,10 +76,38 @@ noremap <right> <nop>
 noremap <space> <nop>
 
 " Disable EOL append
-nnoremap A a
+nnoremap A <nop>
 
 " Disable EX mode
 noremap Q <nop>
+
+" Disable no-punctuation variants E
+noremap B <nop>
+noremap E <nop>
+
+" Disable case shifting
+noremap ~ <nop>
+
+" Disable substitute
+noremap s <nop>
+noremap S <nop>
+
+" Disable changes
+noremap c <nop>
+noremap C <nop>
+
+" Disable marks
+noremap ` <nop>
+noremap m <nop>
+noremap M <nop>
+
+" Disable replace
+noremap r <nop>
+noremap R <nop>
+
+" Disable delete cursor character
+noremap X <nop>
+noremap x <nop>
 
 " Disable man lookup
 noremap K <nop>
