@@ -125,6 +125,12 @@ set nowrap
 nnoremap j gj
 nnoremap k gk
 
+" Remap scrolling
+noremap <C-j> <C-e>
+noremap <C-k> <C-y>
+noremap <C-e> <nop>
+noremap <C-y> <nop>
+
 " Find replace in vselection
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
