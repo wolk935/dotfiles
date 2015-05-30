@@ -6,7 +6,7 @@ source .bash_aliases
 setxkbmap -option ctrl:nocaps
 
 # faster key repeat rate
-xset r rate 200 40
+xset r rate 220 40
 
 # random wallpaper
 feh --bg-fill `find ~/Downloads/wallpapers -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
