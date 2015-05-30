@@ -5,6 +5,9 @@ source .bash_aliases
 # disable caps lock, set as CTRL
 setxkbmap -option ctrl:nocaps
 
+# faster key repeat rate
+xset r rate 200 40
+
 # random wallpaper
 feh --bg-fill `find ~/Downloads/wallpapers -regex ".+\.\(jpg\|png\)" | sort --random-sort | head -1`
 
