@@ -126,10 +126,8 @@ nnoremap j gj
 nnoremap k gk
 
 " Remap scrolling
-noremap <C-j> <C-e>
-noremap <C-k> <C-y>
-noremap <C-e> <nop>
-noremap <C-y> <nop>
+noremap <C-j> <C-e><C-e>
+noremap <C-k> <C-y><C-y>
 
 " Remap quick-exit
 noremap qq ZZ
