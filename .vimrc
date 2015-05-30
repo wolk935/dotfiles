@@ -137,6 +137,10 @@ noremap qe ZQ
 noremap ZZ <nop>
 noremap ZQ <nop>
 
+" Navigate buffers
+noremap <C-h> :bp<CR>
+noremap <C-l> :bn<CR>
+
 " Find replace in vselection
 vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 
