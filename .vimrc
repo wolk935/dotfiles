@@ -148,6 +148,9 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 vmap p "_dp
 vmap P "_dP
 
+" Restrict insert mode variants
+noremap I <nop>
+
 " Terminal 256 colour
 set t_Co=256
 
