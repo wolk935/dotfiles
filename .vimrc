@@ -46,6 +46,10 @@ set shiftround
 set shiftwidth=4
 set tabstop=4
 
+" Show more context
+set scrolloff=1
+set sidescrolloff=80
+
 " No epilepsy
 set noerrorbells
 set novisualbell
