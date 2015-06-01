@@ -15,8 +15,8 @@ export LC_ALL=en_AU.UTF-8
 
 export HISTCONTROL=ignoredups:erasedups
 export HISTFILE=~/.bash_history
-export HISTSIZE=102400
-export HISTFILESIZE=102400
+export HISTSIZE=1024000
+export HISTFILESIZE=1024000
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 export LESSHISTFILE=/dev/null
