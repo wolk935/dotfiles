@@ -5,6 +5,9 @@ source .bash_aliases
 # disable caps lock, set as CTRL
 setxkbmap -option ctrl:nocaps
 
+# use HiDPI
+xrdb -merge ~/.Xresources
+
 # faster key repeat rate
 xset r rate 250 40
 
