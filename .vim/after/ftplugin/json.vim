@@ -1,4 +1,4 @@
-setlocal expandtab
+setlocal noexpandtab
 setlocal nojoinspaces
 setlocal shiftwidth=2
 setlocal smarttab
