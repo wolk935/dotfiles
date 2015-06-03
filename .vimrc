@@ -1,15 +1,17 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'JulesWang/css.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
 Plug 'chrisbra/csv.vim'
 Plug 'elzr/vim-json'
-Plug 'ervandew/supertab'
 Plug 'genoma/vim-less'
-Plug 'godlygeek/tabular'
-Plug 'scrooloose/syntastic'
+
 Plug 'tpope/vim-surround'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+
+Plug 'bling/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
