@@ -1,6 +1,7 @@
 [alias]
 	a = add
 	ad = add
+	ap = add -p
 	bl = branch -avv
 	br = branch
 	chb = checkout -b
